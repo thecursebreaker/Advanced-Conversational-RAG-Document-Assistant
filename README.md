@@ -1,7 +1,9 @@
-Technologies: Python, ChromaDB, Sentence Transformers, Ollama, Qwen, PDF/TXT/DOCX processing
-
-    Built a Retrieval-Augmented Generation (RAG) application in Python for querying unstructured documents using natural language.
-    Implemented document ingestion, text chunking, embedding generation, and semantic retrieval with ChromaDB and Sentence Transformers.
-    Integrated a local Qwen large language model through Ollama to generate context-grounded answers from retrieved document chunks.
-    Added session-based conversation memory and follow-up question handling to improve multi-turn document question answering.
-    Supported indexing and querying of PDF, TXT, DOCX and MD files across a custom document corpus.
+Fully local Retrieval-Augmented Generation (RAG) pipeline powered by Qwen (via Ollama).
+Semantic document retrieval using ChromaDB and Sentence Transformers.
+Automatic document ingestion and indexing for PDF, DOCX, TXT, and Markdown files.
+Intelligent retrieval with multi-query expansion, relevance gating, and typo-tolerant search.
+Session-based conversational memory with support for follow-up questions.
+File-aware retrieval to target specific documents when referenced by the user.
+Context-aware refusal to prevent unsupported or hallucinated answers.
+Structured logging for easier debugging and monitoring.
+Modular, extensible architecture for adding new retrieval strategies or language models.
