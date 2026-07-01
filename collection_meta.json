@@ -1,0 +1,527 @@
+{
+  "files": [
+    {
+      "filename": "2023_06_01T171357-9to5linux-First_Arch_Linux_ISO_Powered_by_Linux_Kernel_63_Is_Now_Available_for_Download.pdf",
+      "path": "data\\2023_06_01T171357-9to5linux-First_Arch_Linux_ISO_Powered_by_Linux_Kernel_63_Is_Now_Available_for_Download.pdf",
+      "chunks": 4,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_07_02T154241-You_Can_Now_Install_Linux_Kernel_64_on_Ubuntu_Heres_How.pdf",
+      "path": "data\\2023_07_02T154241-You_Can_Now_Install_Linux_Kernel_64_on_Ubuntu_Heres_How.pdf",
+      "chunks": 7,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_07_06T103634-New_TUXEDO_Stellaris_17_Linux_Laptop_Promises_the_Fastest_Notebook_Hardware_on_the_Planet.pdf",
+      "path": "data\\2023_07_06T103634-New_TUXEDO_Stellaris_17_Linux_Laptop_Promises_the_Fastest_Notebook_Hardware_on_the_Planet.pdf",
+      "chunks": 6,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_07_06T163402-KDE_Gear_23043_Is_Out_as_the_Last_Update_in_the_Series_to_Fix_More_Bugs.pdf",
+      "path": "data\\2023_07_06T163402-KDE_Gear_23043_Is_Out_as_the_Last_Update_in_the_Series_to_Fix_More_Bugs.pdf",
+      "chunks": 4,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_07_06T171421-Immutable_Distro_blendOS_3_Now_Officially_Available_Based_on_Arch_Linux.pdf",
+      "path": "data\\2023_07_06T171421-Immutable_Distro_blendOS_3_Now_Officially_Available_Based_on_Arch_Linux.pdf",
+      "chunks": 4,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_07_08T142040-KDE_Frameworks_5108_Released_with_Various_Bug_Fixes_and_Improvements.pdf",
+      "path": "data\\2023_07_08T142040-KDE_Frameworks_5108_Released_with_Various_Bug_Fixes_and_Improvements.pdf",
+      "chunks": 4,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_07_09T113824-How_to_Install_the_Latest_GNOME_AlphaBeta_Versions_on_Arch_Linux.pdf",
+      "path": "data\\2023_07_09T113824-How_to_Install_the_Latest_GNOME_AlphaBeta_Versions_on_Arch_Linux.pdf",
+      "chunks": 5,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_07_09T211322-Linus_Torvalds_Announces_First_Linux_Kernel_65_Release_Candidate.pdf",
+      "path": "data\\2023_07_09T211322-Linus_Torvalds_Announces_First_Linux_Kernel_65_Release_Candidate.pdf",
+      "chunks": 6,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_07_09T234956-Ubuntu_Based_Linux_Lite_66_Comes_with_an_AI_Helper_Now_Available_for_Testing.pdf",
+      "path": "data\\2023_07_09T234956-Ubuntu_Based_Linux_Lite_66_Comes_with_an_AI_Helper_Now_Available_for_Testing.pdf",
+      "chunks": 4,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_07_10T103011-9to5Linux_Weekly_Roundup_July_9th_2023.pdf",
+      "path": "data\\2023_07_10T103011-9to5Linux_Weekly_Roundup_July_9th_2023.pdf",
+      "chunks": 3,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_07_10T232957-New_Steam_Client_Stable_Update_Fixes_UI_Issues_on_Linux_for_IntelAMD_Users.pdf",
+      "path": "data\\2023_07_10T232957-New_Steam_Client_Stable_Update_Fixes_UI_Issues_on_Linux_for_IntelAMD_Users.pdf",
+      "chunks": 4,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_07_11T120236-SUSE_Announces_Free_RHEL_Fork_to_Preserve_Choice_in_Enterprise_Linux.pdf",
+      "path": "data\\2023_07_11T120236-SUSE_Announces_Free_RHEL_Fork_to_Preserve_Choice_in_Enterprise_Linux.pdf",
+      "chunks": 5,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_07_11T134111-fwupd_193_Adds_Support_for_More_Thunderbolt_4_Docks_TUXEDO_InfinityBook_Pro_13_v3.pdf",
+      "path": "data\\2023_07_11T134111-fwupd_193_Adds_Support_for_More_Thunderbolt_4_Docks_TUXEDO_InfinityBook_Pro_13_v3.pdf",
+      "chunks": 4,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_07_11T190013-Mozilla_Thunderbird_115_Released_with_Supernova_UI_OpenPGP_Improvements.pdf",
+      "path": "data\\2023_07_11T190013-Mozilla_Thunderbird_115_Released_with_Supernova_UI_OpenPGP_Improvements.pdf",
+      "chunks": 6,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_07_11T202150-Linux_Kernel_63_Reaches_End_of_Life_Users_Urged_to_Upgrade_to_Linux_64.pdf",
+      "path": "data\\2023_07_11T202150-Linux_Kernel_63_Reaches_End_of_Life_Users_Urged_to_Upgrade_to_Linux_64.pdf",
+      "chunks": 5,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_07_13T165154-Star_Labs_Unveils_the_Byte_Mk_II_Mini_Linux_PC_Drops_AMD_for_Intel_CPU.pdf",
+      "path": "data\\2023_07_13T165154-Star_Labs_Unveils_the_Byte_Mk_II_Mini_Linux_PC_Drops_AMD_for_Intel_CPU.pdf",
+      "chunks": 4,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_07_14T021812-Linux_Mint_212_Victoria_Is_Now_Available_for_Download_Heres_Whats_New.pdf",
+      "path": "data\\2023_07_14T021812-Linux_Mint_212_Victoria_Is_Now_Available_for_Download_Heres_Whats_New.pdf",
+      "chunks": 6,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_07_17T122255-9to5Linux_Weekly_Roundup_July_16th_2023.pdf",
+      "path": "data\\2023_07_17T122255-9to5Linux_Weekly_Roundup_July_16th_2023.pdf",
+      "chunks": 3,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_07_17T134636-SparkyLinux_202307_Rolling_Brings_Debian_13_Trixies_Packages_Secure_Boot_and_More.pdf",
+      "path": "data\\2023_07_17T134636-SparkyLinux_202307_Rolling_Brings_Debian_13_Trixies_Packages_Secure_Boot_and_More.pdf",
+      "chunks": 5,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_08_21T095734-9to5Linux_Weekly_Roundup_August_20th_2023.pdf",
+      "path": "data\\2023_08_21T095734-9to5Linux_Weekly_Roundup_August_20th_2023.pdf",
+      "chunks": 3,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_08_21T100042-LibreOffice_76_Open_Source_Office_Suite_Officially_Released_This_Is_Whats_New.pdf",
+      "path": "data\\2023_08_21T100042-LibreOffice_76_Open_Source_Office_Suite_Officially_Released_This_Is_Whats_New.pdf",
+      "chunks": 6,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_08_21T131850-Bodhi_Linux_70_Released_with_Linux_Kernel_64_Based_on_Ubuntu_2204_LTS.pdf",
+      "path": "data\\2023_08_21T131850-Bodhi_Linux_70_Released_with_Linux_Kernel_64_Based_on_Ubuntu_2204_LTS.pdf",
+      "chunks": 4,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_08_22T195900-QEMU_81_Released_with_New_PipeWire_Audio_Backend_Many_Improvements.pdf",
+      "path": "data\\2023_08_22T195900-QEMU_81_Released_with_New_PipeWire_Audio_Backend_Many_Improvements.pdf",
+      "chunks": 5,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_08_23T221148-Kali_Linux_20233_Released_with_9_New_Tools_for_Ethical_Hacking_Linux_Kernel_63.pdf",
+      "path": "data\\2023_08_23T221148-Kali_Linux_20233_Released_with_9_New_Tools_for_Ethical_Hacking_Linux_Kernel_63.pdf",
+      "chunks": 6,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_08_24T150040-KDE_Gear_2308_Released_with_Lots_of_Goodies_for_Your_Favorite_KDE_Apps.pdf",
+      "path": "data\\2023_08_24T150040-KDE_Gear_2308_Released_with_Lots_of_Goodies_for_Your_Favorite_KDE_Apps.pdf",
+      "chunks": 7,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_08_27T073938-Mageia_9_Officially_Released_with_Linux_64_Smaller_Disk_Footprint_and_More.pdf",
+      "path": "data\\2023_08_27T073938-Mageia_9_Officially_Released_with_Linux_64_Smaller_Disk_Footprint_and_More.pdf",
+      "chunks": 4,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_08_27T203812-GNOME_45s_Nautilus_File_Manager_Gets_a_Modern_Full_Height_Sidebar_Layout.pdf",
+      "path": "data\\2023_08_27T203812-GNOME_45s_Nautilus_File_Manager_Gets_a_Modern_Full_Height_Sidebar_Layout.pdf",
+      "chunks": 5,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_08_27T220503-Linux_Kernel_65_Officially_Released_This_Is_Whats_New.pdf",
+      "path": "data\\2023_08_27T220503-Linux_Kernel_65_Officially_Released_This_Is_Whats_New.pdf",
+      "chunks": 5,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_08_28T065006-9to5Linux_Weekly_Roundup_August_27th_2023.pdf",
+      "path": "data\\2023_08_28T065006-9to5Linux_Weekly_Roundup_August_27th_2023.pdf",
+      "chunks": 3,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_08_28T080005-GNU_Linux_Libre_65_Kernel_Released_for_Those_Seeking_100_Freedom_for_Their_PCs.pdf",
+      "path": "data\\2023_08_28T080005-GNU_Linux_Libre_65_Kernel_Released_for_Those_Seeking_100_Freedom_for_Their_PCs.pdf",
+      "chunks": 4,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_08_28T143824-Mozilla_Firefox_117_Is_Now_Available_for_Download_Heres_Whats_New.pdf",
+      "path": "data\\2023_08_28T143824-Mozilla_Firefox_117_Is_Now_Available_for_Download_Heres_Whats_New.pdf",
+      "chunks": 5,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_09_22T135946-KaOS_Linux_202309_Adds_KDE_Gear_2308_Focus_To_Shift_On_KDE_Plasma_6_ISO.pdf",
+      "path": "data\\2023_09_22T135946-KaOS_Linux_202309_Adds_KDE_Gear_2308_Focus_To_Shift_On_KDE_Plasma_6_ISO.pdf",
+      "chunks": 4,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_09_25T024112-9to5Linux_Weekly_Roundup_September_24th_2023.pdf",
+      "path": "data\\2023_09_25T024112-9to5Linux_Weekly_Roundup_September_24th_2023.pdf",
+      "chunks": 3,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_09_25T144638-Firefox_118_Is_Now_Available_for_Download_with_Built_In_Translation_for_Websites.pdf",
+      "path": "data\\2023_09_25T144638-Firefox_118_Is_Now_Available_for_Download_with_Built_In_Translation_for_Websites.pdf",
+      "chunks": 6,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_09_25T214835-LMDE_Linux_Mint_Debian_Edition_6_Faye_Is_Now_Available_for_Download.pdf",
+      "path": "data\\2023_09_25T214835-LMDE_Linux_Mint_Debian_Edition_6_Faye_Is_Now_Available_for_Download.pdf",
+      "chunks": 5,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_09_26T142237-Firefox_119_Promises_to_Let_You_Import_Some_of_Your_Chrome_Extensions.pdf",
+      "path": "data\\2023_09_26T142237-Firefox_119_Promises_to_Let_You_Import_Some_of_Your_Chrome_Extensions.pdf",
+      "chunks": 4,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_09_26T151441-LibreOffice_762_and_757_Released_to_Address_Critical_WebP_Vulnerability.pdf",
+      "path": "data\\2023_09_26T151441-LibreOffice_762_and_757_Released_to_Address_Critical_WebP_Vulnerability.pdf",
+      "chunks": 5,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_09_26T155218-GNOME_46_Desktop_Environment_Slated_for_Release_on_March_20th_2024.pdf",
+      "path": "data\\2023_09_26T155218-GNOME_46_Desktop_Environment_Slated_for_Release_on_March_20th_2024.pdf",
+      "chunks": 5,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_09_27T092608-Slackware_Based_Porteus_Linux_501_Released_with_Linux_Kernel_65.pdf",
+      "path": "data\\2023_09_27T092608-Slackware_Based_Porteus_Linux_501_Released_with_Linux_Kernel_65.pdf",
+      "chunks": 4,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_09_28T093620-Raspberry_Pi_5_Announced_for_End_of_October_Here_Are_the_Specs.pdf",
+      "path": "data\\2023_09_28T093620-Raspberry_Pi_5_Announced_for_End_of_October_Here_Are_the_Specs.pdf",
+      "chunks": 5,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_09_29T075500-Mesa_232_Brings_OpenGL_31__OpenGL_ES_30_Support_on_Asahi_New_RADV_Features.pdf",
+      "path": "data\\2023_09_29T075500-Mesa_232_Brings_OpenGL_31__OpenGL_ES_30_Support_on_Asahi_New_RADV_Features.pdf",
+      "chunks": 5,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_10_02T075900-9to5Linux_Weekly_Roundup_October_1st_2023.pdf",
+      "path": "data\\2023_10_02T075900-9to5Linux_Weekly_Roundup_October_1st_2023.pdf",
+      "chunks": 4,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_10_02T144916-Linux_Mint_212_EDGE_ISO_Released_with_Linux_Kernel_62_Secure_Boot_Support.pdf",
+      "path": "data\\2023_10_02T144916-Linux_Mint_212_EDGE_ISO_Released_with_Linux_Kernel_62_Secure_Boot_Support.pdf",
+      "chunks": 4,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_10_03T155803-elementary_OS_71_Released_with_New_Privacy_Features_Improved_AppCenter.pdf",
+      "path": "data\\2023_10_03T155803-elementary_OS_71_Released_with_New_Privacy_Features_Improved_AppCenter.pdf",
+      "chunks": 6,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_10_05T092536-Slax_Linux_Gets_Enhanced_Session_Management_and_Boot_Parameter_Options.pdf",
+      "path": "data\\2023_10_05T092536-Slax_Linux_Gets_Enhanced_Session_Management_and_Boot_Parameter_Options.pdf",
+      "chunks": 5,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_10_05T111103-Krita_52_Brings_Animation_and_Text_Handling_Improvements_Built_In_FFmpeg.pdf",
+      "path": "data\\2023_10_05T111103-Krita_52_Brings_Animation_and_Text_Handling_Improvements_Built_In_FFmpeg.pdf",
+      "chunks": 5,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_10_06T023553-Proton_80_4_Released_with_Support_for_More_Windows_Games_on_Linux.pdf",
+      "path": "data\\2023_10_06T023553-Proton_80_4_Released_with_Support_for_More_Windows_Games_on_Linux.pdf",
+      "chunks": 5,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_10_06T101639-Fwupd_196_Linux_Firmware_Updater_Adds_Support_for_AMD_dGPUs_Navi3x_and_Later.pdf",
+      "path": "data\\2023_10_06T101639-Fwupd_196_Linux_Firmware_Updater_Adds_Support_for_AMD_dGPUs_Navi3x_and_Later.pdf",
+      "chunks": 5,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_10_08T075900-Debian_122_Bookworm_Released_with_117_Bug_Fixes_and_52_Security_Updates.pdf",
+      "path": "data\\2023_10_08T075900-Debian_122_Bookworm_Released_with_117_Bug_Fixes_and_52_Security_Updates.pdf",
+      "chunks": 5,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_10_08T205628-VLC_3019_Improves_AV1_HDR_Support_with_Software_Decoding_Fixes_Linux_Issues.pdf",
+      "path": "data\\2023_10_08T205628-VLC_3019_Improves_AV1_HDR_Support_with_Software_Decoding_Fixes_Linux_Issues.pdf",
+      "chunks": 5,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_10_09T051021-Ardour_80_Open_Source_DAW_Released_with_Launchpad_Pro_Support_Region_Grouping.pdf",
+      "path": "data\\2023_10_09T051021-Ardour_80_Open_Source_DAW_Released_with_Launchpad_Pro_Support_Region_Grouping.pdf",
+      "chunks": 5,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_10_09T103945-9to5Linux_Weekly_Roundup_October_8th_2023.pdf",
+      "path": "data\\2023_10_09T103945-9to5Linux_Weekly_Roundup_October_8th_2023.pdf",
+      "chunks": 4,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_10_11T103134-Raspberry_Pi_OS_Is_Now_Based_on_Debian_Bookworm_Supports_Raspberry_Pi_5.pdf",
+      "path": "data\\2023_10_11T103134-Raspberry_Pi_OS_Is_Now_Based_on_Debian_Bookworm_Supports_Raspberry_Pi_5.pdf",
+      "chunks": 5,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_10_11T140356-Fedora_Slimbook_Linux_Laptop_Launched_with_3K_Display_NVIDIA_RTX_3050_Ti.pdf",
+      "path": "data\\2023_10_11T140356-Fedora_Slimbook_Linux_Laptop_Launched_with_3K_Display_NVIDIA_RTX_3050_Ti.pdf",
+      "chunks": 4,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_10_12T005146-SparkyLinux_202310_Brings_Linux_Kernel_65_Latest_Debian_13_Trixie_Updates.pdf",
+      "path": "data\\2023_10_12T005146-SparkyLinux_202310_Brings_Linux_Kernel_65_Latest_Debian_13_Trixie_Updates.pdf",
+      "chunks": 5,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_10_12T070948-How_To_Upgrade_Raspberry_Pi_OS_to_Debian_Bookworm_from_Bullseye.pdf",
+      "path": "data\\2023_10_12T070948-How_To_Upgrade_Raspberry_Pi_OS_to_Debian_Bookworm_from_Bullseye.pdf",
+      "chunks": 6,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_10_12T121202-KDE_Gear_23082_Released_with_More_Fixes_for_Your_Favorite_KDE_Apps.pdf",
+      "path": "data\\2023_10_12T121202-KDE_Gear_23082_Released_with_More_Fixes_for_Your_Favorite_KDE_Apps.pdf",
+      "chunks": 5,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_10_12T143751-Ubuntu_2310_Official_Flavors_Are_Now_Available_for_Download_Heres_Whats_New.pdf",
+      "path": "data\\2023_10_12T143751-Ubuntu_2310_Official_Flavors_Are_Now_Available_for_Download_Heres_Whats_New.pdf",
+      "chunks": 5,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_10_12T155450-Ubuntu_2310_Mantic_Minotaur_Officially_Released_with_Linux_65_and_GNOME_45.pdf",
+      "path": "data\\2023_10_12T155450-Ubuntu_2310_Mantic_Minotaur_Officially_Released_with_Linux_65_and_GNOME_45.pdf",
+      "chunks": 6,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_10_13T173411-OpenZFS_22_Released_with_Linux_65_Support_Block_Cloning_and_More.pdf",
+      "path": "data\\2023_10_13T173411-OpenZFS_22_Released_with_Linux_65_Support_Block_Cloning_and_More.pdf",
+      "chunks": 6,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_10_14T082419-Arch_Linuxs_October_2023_ISO_Release_Brings_Linux_65_Installer_Improvements.pdf",
+      "path": "data\\2023_10_14T082419-Arch_Linuxs_October_2023_ISO_Release_Brings_Linux_65_Installer_Improvements.pdf",
+      "chunks": 4,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_10_19T125021-KDE_Frameworks_5111_Is_Out_and_KDE_Plasma_6_Now_Has_a_Release_Schedule.pdf",
+      "path": "data\\2023_10_19T125021-KDE_Frameworks_5111_Is_Out_and_KDE_Plasma_6_Now_Has_a_Release_Schedule.pdf",
+      "chunks": 5,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_10_19T170854-Geany_20_Open_Source_IDE_Released_with_UI_Improvements_Initial_Meson_Support.pdf",
+      "path": "data\\2023_10_19T170854-Geany_20_Open_Source_IDE_Released_with_UI_Improvements_Initial_Meson_Support.pdf",
+      "chunks": 5,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_10_19T175753-Ardour_81_Open_Source_DAW_Improves_Launchpad_Pro_Support_Fixes_Bugs.pdf",
+      "path": "data\\2023_10_19T175753-Ardour_81_Open_Source_DAW_Improves_Launchpad_Pro_Support_Fixes_Bugs.pdf",
+      "chunks": 4,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_10_19T195604-Raspberry_Pi_Imager_Gets_New_Tabbed_OS_Customization_UI_Raspberry_Pi_5_Support.pdf",
+      "path": "data\\2023_10_19T195604-Raspberry_Pi_Imager_Gets_New_Tabbed_OS_Customization_UI_Raspberry_Pi_5_Support.pdf",
+      "chunks": 4,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_10_23T015442-qBittorrent_46_Released_with_Initial_I2P_Support_Torrent_Tags_Editing_and_More.pdf",
+      "path": "data\\2023_10_23T015442-qBittorrent_46_Released_with_Initial_I2P_Support_Torrent_Tags_Editing_and_More.pdf",
+      "chunks": 5,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_10_23T095713-9to5Linux_Weekly_Roundup_October_22nd_2023.pdf",
+      "path": "data\\2023_10_23T095713-9to5Linux_Weekly_Roundup_October_22nd_2023.pdf",
+      "chunks": 4,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_10_23T152807-Mozilla_Firefox_119_Is_Now_Available_for_Download_Heres_Whats_New.pdf",
+      "path": "data\\2023_10_23T152807-Mozilla_Firefox_119_Is_Now_Available_for_Download_Heres_Whats_New.pdf",
+      "chunks": 6,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_10_24T164749-KDE_Plasma_5279_Improves_Plasma_Wayland_and_Flatpak_Based_GNOME_Apps.pdf",
+      "path": "data\\2023_10_24T164749-KDE_Plasma_5279_Improves_Plasma_Wayland_and_Flatpak_Based_GNOME_Apps.pdf",
+      "chunks": 5,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_10_24T233323-Firefox_120_to_Finally_Let_Ubuntu_Users_Import_Chromium_Browser_Data_in_Firefox_Snap.pdf",
+      "path": "data\\2023_10_24T233323-Firefox_120_to_Finally_Let_Ubuntu_Users_Import_Chromium_Browser_Data_in_Firefox_Snap.pdf",
+      "chunks": 5,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_10_25T130343-TUXEDO_Linux_Gaming_Laptops_Powered_by_AMD_Ryzen_7000_Series_CPUs_Are_Back.pdf",
+      "path": "data\\2023_10_25T130343-TUXEDO_Linux_Gaming_Laptops_Powered_by_AMD_Ryzen_7000_Series_CPUs_Are_Back.pdf",
+      "chunks": 5,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_10_25T235724-Latest_Steam_Client_Update_Enables_New_VR_Gamepad_UI_in_SteamVR_Beta_on_Linux.pdf",
+      "path": "data\\2023_10_25T235724-Latest_Steam_Client_Update_Enables_New_VR_Gamepad_UI_in_SteamVR_Beta_on_Linux.pdf",
+      "chunks": 6,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_10_26T123142-GNOME_451_Improves_Flatpak_Permission_Checks_Adds_Support_for_More_CPUs.pdf",
+      "path": "data\\2023_10_26T123142-GNOME_451_Improves_Flatpak_Permission_Checks_Adds_Support_for_More_CPUs.pdf",
+      "chunks": 5,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_10_26T184911-Linux_Mint_213_to_Ship_with_Cinnamon_60_and_Experimental_Wayland_Support.pdf",
+      "path": "data\\2023_10_26T184911-Linux_Mint_213_to_Ship_with_Cinnamon_60_and_Experimental_Wayland_Support.pdf",
+      "chunks": 5,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_10_26T234912-Ubuntu_2404_LTS_Noble_Numbat_Is_Slated_for_Release_on_April_25th_2024.pdf",
+      "path": "data\\2023_10_26T234912-Ubuntu_2404_LTS_Noble_Numbat_Is_Slated_for_Release_on_April_25th_2024.pdf",
+      "chunks": 4,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_10_30T160805-GNU_Linux_Libre_66_Kernel_Released_for_Software_Freedom_Lovers.pdf",
+      "path": "data\\2023_10_30T160805-GNU_Linux_Libre_66_Kernel_Released_for_Software_Freedom_Lovers.pdf",
+      "chunks": 4,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_10_30T185317-VLC_3020_Brings_Fixes_for_Potential_Security_Issue_AV1_Hardware_Decoder.pdf",
+      "path": "data\\2023_10_30T185317-VLC_3020_Brings_Fixes_for_Potential_Security_Issue_AV1_Hardware_Decoder.pdf",
+      "chunks": 4,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_10_31T143255-NVIDIA_5452902_Linux_Graphics_Driver_Is_Out_with_Wayland_Improvements_More.pdf",
+      "path": "data\\2023_10_31T143255-NVIDIA_5452902_Linux_Graphics_Driver_Is_Out_with_Wayland_Improvements_More.pdf",
+      "chunks": 6,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_11_01T122628-Ubuntu_2404_LTS_Noble_Numbat_Daily_Build_ISOs_Are_Now_Available_for_Download.pdf",
+      "path": "data\\2023_11_01T122628-Ubuntu_2404_LTS_Noble_Numbat_Daily_Build_ISOs_Are_Now_Available_for_Download.pdf",
+      "chunks": 4,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_11_01T125259-Fwupd_197_Adds_Support_for_More_Synaptics_Prometheus_Fingerprint_Readers.pdf",
+      "path": "data\\2023_11_01T125259-Fwupd_197_Adds_Support_for_More_Synaptics_Prometheus_Fingerprint_Readers.pdf",
+      "chunks": 5,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_11_01T131620-GNOME_Shell_and_Mutter_451_Released_with_Xwayland_and_Wayland_Improvements.pdf",
+      "path": "data\\2023_11_01T131620-GNOME_Shell_and_Mutter_451_Released_with_Xwayland_and_Wayland_Improvements.pdf",
+      "chunks": 5,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_11_02T080255-Immutable_Distro_Nitrux_31_Brings_Revamped_Upgrade_Utility_Latest_KDE_Software.pdf",
+      "path": "data\\2023_11_02T080255-Immutable_Distro_Nitrux_31_Brings_Revamped_Upgrade_Utility_Latest_KDE_Software.pdf",
+      "chunks": 4,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_11_02T172733-Audacity_34_Released_with_Music_Workflows_New_Exporter_and_More.pdf",
+      "path": "data\\2023_11_02T172733-Audacity_34_Released_with_Music_Workflows_New_Exporter_and_More.pdf",
+      "chunks": 4,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_11_02T181155-You_Can_Now_Upgrade_from_Ubuntu_2304_to_Ubuntu_2310_Heres_How.pdf",
+      "path": "data\\2023_11_02T181155-You_Can_Now_Upgrade_from_Ubuntu_2304_to_Ubuntu_2310_Heres_How.pdf",
+      "chunks": 5,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_11_02T192331-LibreOffice_758_Is_Here_as_the_Last_Update_in_the_Series_Upgrade_to_LibreOffice_76_Now.pdf",
+      "path": "data\\2023_11_02T192331-LibreOffice_758_Is_Here_as_the_Last_Update_in_the_Series_Upgrade_to_LibreOffice_76_Now.pdf",
+      "chunks": 4,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_11_05T133334-LXQt_14_Desktop_Environment_Officially_Released_This_Is_Whats_New.pdf",
+      "path": "data\\2023_11_05T133334-LXQt_14_Desktop_Environment_Officially_Released_This_Is_Whats_New.pdf",
+      "chunks": 4,
+      "suffix": ".pdf"
+    },
+    {
+      "filename": "2023_11_06T110143-9to5Linux_Weekly_Roundup_November_5th_2023.pdf",
+      "path": "data\\2023_11_06T110143-9to5Linux_Weekly_Roundup_November_5th_2023.pdf",
+      "chunks": 4,
+      "suffix": ".pdf"
+    }
+  ],
+  "file_count": 87
+}
