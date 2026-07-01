@@ -1,0 +1,24 @@
+2026-07-02 00:04:43,539 | INFO | rag_app_2026-07-02_00-04-43 | session_log_file=logs\session_2026-07-02_00-04-43.log
+2026-07-02 00:04:43,540 | INFO | rag_app_2026-07-02_00-04-43 | application_start=true
+2026-07-02 00:05:02,053 | INFO | rag_app_2026-07-02_00-04-43 | USER: when is arc linux available for download
+2026-07-02 00:05:02,054 | INFO | rag_app_2026-07-02_00-04-43 | route=document
+2026-07-02 00:05:03,428 | INFO | rag_app_2026-07-02_00-04-43 | fuzzy_corrected_question=when is arc linux available for download
+2026-07-02 00:05:03,428 | INFO | rag_app_2026-07-02_00-04-43 | raw_query_variants=['When is Arx Linux available for download?', 'When is Arch Linux available for download?', 'when is arc linux available for download']
+2026-07-02 00:05:03,432 | INFO | rag_app_2026-07-02_00-04-43 | filtered_query_variants=['When is Arch Linux available for download?']
+2026-07-02 00:05:03,506 | INFO | rag_app_2026-07-02_00-04-43 | multi_query_retrieval_time_seconds=0.0744
+2026-07-02 00:05:08,576 | INFO | rag_app_2026-07-02_00-04-43 | relevance=True
+2026-07-02 00:05:11,760 | INFO | rag_app_2026-07-02_00-04-43 | retrieved_sources=[{'chunk_index': 3, 'source': 'data\\2023_06_01T171357-9to5linux-First_Arch_Linux_ISO_Powered_by_Linux_Kernel_63_Is_Now_Available_for_Download.pdf', 'filename': '2023_06_01T171357-9to5linux-First_Arch_Linux_ISO_Powered_by_Linux_Kernel_63_Is_Now_Available_for_Download.pdf'}, {'filename': '2023_10_14T082419-Arch_Linuxs_October_2023_ISO_Release_Brings_Linux_65_Installer_Improvements.pdf', 'chunk_index': 1, 'source': 'data\\2023_10_14T082419-Arch_Linuxs_October_2023_ISO_Release_Brings_Linux_65_Installer_Improvements.pdf'}, {'source': 'data\\2023_10_14T082419-Arch_Linuxs_October_2023_ISO_Release_Brings_Linux_65_Installer_Improvements.pdf', 'filename': '2023_10_14T082419-Arch_Linuxs_October_2023_ISO_Release_Brings_Linux_65_Installer_Improvements.pdf', 'chunk_index': 0}, {'chunk_index': 0, 'filename': '2023_06_01T171357-9to5linux-First_Arch_Linux_ISO_Powered_by_Linux_Kernel_63_Is_Now_Available_for_Download.pdf', 'source': 'data\\2023_06_01T171357-9to5linux-First_Arch_Linux_ISO_Powered_by_Linux_Kernel_63_Is_Now_Available_for_Download.pdf'}]
+2026-07-02 00:05:11,761 | INFO | rag_app_2026-07-02_00-04-43 | ASSISTANT: Arch Linux is available for download from its official website when you want to deploy it on new machines [Source 1]. Specifically, the October 2023 ISO release is now available for download and is powered by the Linux 6.5 kernel [Source 2].
+2026-07-02 00:05:20,543 | INFO | rag_app_2026-07-02_00-04-43 | USER: when is arx linus available for download
+2026-07-02 00:05:20,543 | INFO | rag_app_2026-07-02_00-04-43 | route=document
+2026-07-02 00:05:21,656 | INFO | rag_app_2026-07-02_00-04-43 | fuzzy_corrected_question=when is arx linus available for download
+2026-07-02 00:05:21,656 | INFO | rag_app_2026-07-02_00-04-43 | raw_query_variants=['When is Arx Linux available for download?', 'When is Arch Linux available for download?', 'when is arx linus available for download']
+2026-07-02 00:05:21,656 | INFO | rag_app_2026-07-02_00-04-43 | filtered_query_variants=['When is Arch Linux available for download?']
+2026-07-02 00:05:21,667 | INFO | rag_app_2026-07-02_00-04-43 | multi_query_retrieval_time_seconds=0.0106
+2026-07-02 00:05:26,760 | INFO | rag_app_2026-07-02_00-04-43 | relevance=True
+2026-07-02 00:05:28,295 | INFO | rag_app_2026-07-02_00-04-43 | retrieved_sources=[{'chunk_index': 3, 'source': 'data\\2023_06_01T171357-9to5linux-First_Arch_Linux_ISO_Powered_by_Linux_Kernel_63_Is_Now_Available_for_Download.pdf', 'filename': '2023_06_01T171357-9to5linux-First_Arch_Linux_ISO_Powered_by_Linux_Kernel_63_Is_Now_Available_for_Download.pdf'}, {'source': 'data\\2023_10_14T082419-Arch_Linuxs_October_2023_ISO_Release_Brings_Linux_65_Installer_Improvements.pdf', 'chunk_index': 1, 'filename': '2023_10_14T082419-Arch_Linuxs_October_2023_ISO_Release_Brings_Linux_65_Installer_Improvements.pdf'}, {'chunk_index': 0, 'source': 'data\\2023_10_14T082419-Arch_Linuxs_October_2023_ISO_Release_Brings_Linux_65_Installer_Improvements.pdf', 'filename': '2023_10_14T082419-Arch_Linuxs_October_2023_ISO_Release_Brings_Linux_65_Installer_Improvements.pdf'}, {'source': 'data\\2023_06_01T171357-9to5linux-First_Arch_Linux_ISO_Powered_by_Linux_Kernel_63_Is_Now_Available_for_Download.pdf', 'chunk_index': 0, 'filename': '2023_06_01T171357-9to5linux-First_Arch_Linux_ISO_Powered_by_Linux_Kernel_63_Is_Now_Available_for_Download.pdf'}]
+2026-07-02 00:05:28,297 | INFO | rag_app_2026-07-02_00-04-43 | ASSISTANT: I could not find that in the provided documents.
+2026-07-02 00:05:45,613 | INFO | rag_app_2026-07-02_00-04-43 | USER: exit
+2026-07-02 00:05:45,613 | INFO | rag_app_2026-07-02_00-04-43 | route=control
+2026-07-02 00:05:45,614 | INFO | rag_app_2026-07-02_00-04-43 | ASSISTANT: Goodbye.
+2026-07-02 00:05:45,614 | INFO | rag_app_2026-07-02_00-04-43 | application_exit=true

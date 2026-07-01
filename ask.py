@@ -1,15 +1,27 @@
 import json
-from pathlib import Path
 
-import chromadb
-from chromadb.utils import embedding_functions
-from langchain_ollama import OllamaLLM
-
-
-CHROMA_DIR = "chroma_db"
-COLLECTION_NAME = "my_documents"
-META_FILE = Path("collection_meta.json")
-OLLAMA_MODEL = "qwen2.5:7b"
+from config import (
+    META_FILE,
+    SHOW_QUERY_VARIANTS,
+    SHOW_RETRIEVED_SOURCES,
+    STRICT_DOC_MODE,
+)
+from llm_utils import get_llm, small_chat_reply
+from logger import get_logger
+from memory import SessionMemory
+from retrieval import (
+    get_collection,
+    handle_document_question,
+    handle_file_summary_question,
+)
+from router import classify_route
+from tools import (
+    answer_memory_question,
+    extract_file_position,
+    get_file_by_position,
+    help_message,
+    list_files,
+)
 
 
 def load_metadata():
@@ -22,240 +34,196 @@ def load_metadata():
         return {"files": [], "file_count": 0}
 
 
-def is_meta_question(question: str) -> bool:
+def handle_control(question: str, memory: SessionMemory):
     q = question.lower().strip()
 
-    patterns = [
-        "what do you know",
-        "what can you do",
-        "what files",
-        "which files",
-        "what documents",
-        "which documents",
-        "what is in the database",
-        "what do you have",
-        "summarize the files",
-        "list the files",
-        "list files",
-        "show files",
-    ]
+    if q in {"exit", "quit"}:
+        return {"action": "exit", "answer": "Goodbye."}
 
-    return any(p in q for p in patterns)
+    if q == "reset":
+        memory.reset()
+        return {"action": "continue", "answer": "Chat memory cleared."}
+
+    if q == "help":
+        return {"action": "continue", "answer": help_message()}
+
+    return {"action": "continue", "answer": "Unknown control command."}
 
 
-def answer_meta_question(metadata: dict) -> str:
-    files = metadata.get("files", [])
-    if not files:
+def handle_general(question: str):
+    if STRICT_DOC_MODE:
         return (
-            "I do not have any indexed files yet. Put documents in the data "
-            "folder and run ingest.py first."
+            "That question is outside the scope of the indexed documents. "
+            "Ask me about your files instead."
         )
-
-    lines = [
-        f"I currently have access to {len(files)} indexed file(s).",
-        "",
-        "Files:",
-    ]
-
-    for f in files[:20]:
-        lines.append(
-            f"- {f['filename']} ({f['suffix']}, {f['chunks']} chunks)"
-        )
-
-    lines.append("")
-    lines.append(
-        "You can ask me questions about facts, dates, people, summaries, "
-        "or topics found in those files."
-    )
-
-    return "\n".join(lines)
-
-
-def format_chat_history(chat_history, max_turns=6) -> str:
-    recent = chat_history[-max_turns:]
-    lines = []
-
-    for turn in recent:
-        lines.append(f"User: {turn['user']}")
-        lines.append(f"Assistant: {turn['assistant']}")
-
-    return "\n".join(lines)
-
-
-def rewrite_question(llm, chat_history, question: str) -> str:
-    history_text = format_chat_history(chat_history)
-
-    prompt = f"""
-You rewrite follow-up questions into clear standalone questions for
-document retrieval.
-
-Rules:
-- Keep the meaning exactly the same.
-- Use the chat history only to resolve references like "he", "it",
-  "that year", "what about the second one", etc.
-- If the user's question is already standalone, return it unchanged.
-- Return only the rewritten question.
-- Do not answer the question.
-
-Chat history:
-{history_text}
-
-Latest user question:
-{question}
-
-Standalone question:
-""".strip()
-
-    rewritten = llm.invoke(prompt)
-    return (rewritten or question).strip()
-
-
-def build_context(results) -> str:
-    docs = results["documents"][0]
-    metas = results["metadatas"][0]
-
-    parts = []
-    for i, (doc, meta) in enumerate(zip(docs, metas), start=1):
-        source = meta.get("source", "Unknown source")
-        chunk_index = meta.get("chunk_index", "Unknown chunk")
-        parts.append(
-            f"[Source {i}: {source}, chunk {chunk_index}]\n{doc}"
-        )
-
-    return "\n\n".join(parts)
-
-
-def answer_with_rag(llm, chat_history, question: str, context: str) -> str:
-    history_text = format_chat_history(chat_history)
-
-    prompt = f"""
-You are a helpful assistant answering questions using only the provided
-document context.
-
-Rules:
-- Use chat history only to understand references in the conversation.
-- Use the document context as the factual source.
-- If the answer is not in the context, say exactly:
-  "I could not find that in the provided documents."
-- Do not invent facts.
-- Cite relevant sources like [Source 1].
-- Be concise but complete.
-
-Recent chat history:
-{history_text}
-
-Document context:
-{context}
-
-Current user question:
-{question}
-
-Answer:
-""".strip()
-
-    answer = llm.invoke(prompt)
-    return answer.strip()
+    return "General mode is disabled in this project version."
 
 
 def main():
+    logger = get_logger()
+    logger.info("application_start=true")
+
     metadata = load_metadata()
+    llm = get_llm()
+    collection = get_collection()
+    memory = SessionMemory()
 
-    chroma_client = chromadb.PersistentClient(path=CHROMA_DIR)
-
-    embedding_fn = embedding_functions.SentenceTransformerEmbeddingFunction(
-        model_name="sentence-transformers/all-MiniLM-L6-v2"
-    )
-
-    collection = chroma_client.get_collection(
-        name=COLLECTION_NAME,
-        embedding_function=embedding_fn,
-    )
-
-    llm = OllamaLLM(model=OLLAMA_MODEL)
-
-    chat_history = []
-
-    print("Conversational local RAG is ready.")
-    print("Type 'exit' to quit.")
+    print("LLM document system is ready.")
+    print("Type 'help' for examples.")
     print("Type 'reset' to clear chat memory.")
+    print("Type 'exit' to quit.")
 
     while True:
         question = input("\nYou: ").strip()
-
         if not question:
             continue
 
-        if question.lower() in {"exit", "quit"}:
-            break
+        logger.info("USER: %s", question)
 
-        if question.lower() == "reset":
-            chat_history = []
-            print("Assistant: Chat memory cleared.")
-            continue
+        route = classify_route(question)
+        logger.info("route=%s", route)
 
-        if is_meta_question(question):
-            answer = answer_meta_question(metadata)
+        if route == "control":
+            result = handle_control(question, memory)
+            answer = result["answer"]
+
             print("\nAssistant:")
             print(answer)
 
-            chat_history.append(
-                {
-                    "user": question,
-                    "assistant": answer,
-                }
-            )
+            logger.info("ASSISTANT: %s", answer)
+
+            if question.lower().strip() not in {"reset"}:
+                memory.add_turn(question, answer)
+
+            if result["action"] == "exit":
+                logger.info("application_exit=true")
+                break
+
             continue
 
-        standalone_question = rewrite_question(
-            llm=llm,
-            chat_history=chat_history,
-            question=question,
-        )
+        if route == "chat":
+            answer = small_chat_reply(question)
 
-        results = collection.query(
-            query_texts=[standalone_question],
-            n_results=4,
-        )
-
-        docs = results.get("documents", [[]])[0]
-        if not docs:
-            answer = "I could not find that in the provided documents."
             print("\nAssistant:")
             print(answer)
 
-            chat_history.append(
-                {
-                    "user": question,
-                    "assistant": answer,
-                }
-            )
+            logger.info("ASSISTANT: %s", answer)
+
+            memory.add_turn(question, answer)
             continue
 
-        context = build_context(results)
+        if route == "meta":
+            answer = list_files(metadata)
 
-        answer = answer_with_rag(
+            print("\nAssistant:")
+            print(answer)
+
+            logger.info("ASSISTANT: %s", answer)
+
+            memory.add_turn(question, answer)
+            continue
+
+        if route == "memory":
+            answer = answer_memory_question(question, memory)
+
+            print("\nAssistant:")
+            print(answer)
+
+            logger.info("ASSISTANT: %s", answer)
+
+            memory.add_turn(question, answer)
+            continue
+
+        if route == "general":
+            answer = handle_general(question)
+
+            print("\nAssistant:")
+            print(answer)
+
+            logger.info("ASSISTANT: %s", answer)
+
+            memory.add_turn(question, answer)
+            continue
+
+        if route == "file_lookup":
+            position = extract_file_position(question)
+
+            if position is None:
+                answer = "I could not determine which document number you meant."
+
+                print("\nAssistant:")
+                print(answer)
+
+                logger.info("ASSISTANT: %s", answer)
+
+                memory.add_turn(question, answer)
+                continue
+
+            file_info = get_file_by_position(metadata, position)
+
+            if file_info is None:
+                answer = f"I could not find file number {position}."
+
+                print("\nAssistant:")
+                print(answer)
+
+                logger.info("ASSISTANT: %s", answer)
+
+                memory.add_turn(question, answer)
+                continue
+
+            result = handle_file_summary_question(
+                llm=llm,
+                filename=file_info["filename"],
+                collection=collection,
+                logger=logger,
+            )
+
+            answer = (
+                f"Document {position} is {file_info['filename']}.\n\n"
+                f"{result['answer']}"
+            )
+
+            print("\nAssistant:")
+            print(answer)
+
+            logger.info("ASSISTANT: %s", answer)
+
+            if SHOW_RETRIEVED_SOURCES:
+                print("\nRetrieved sources:")
+                for i, meta in enumerate(result["results"]["metadatas"][0], start=1):
+                    print(f"{i}. {meta}")
+
+            memory.add_turn(question, answer)
+            continue
+
+        result = handle_document_question(
             llm=llm,
-            chat_history=chat_history,
+            memory=memory,
+            collection=collection,
             question=question,
-            context=context,
+            logger=logger,
+            metadata=metadata,
         )
 
-        print("\nStandalone retrieval question:")
-        print(standalone_question)
+        answer = result["answer"]
+
+        if SHOW_QUERY_VARIANTS:
+            print("\nQuery variants used:")
+            for i, query in enumerate(result["query_variants"], start=1):
+                print(f"{i}. {query}")
 
         print("\nAssistant:")
         print(answer)
 
-        print("\nRetrieved sources:")
-        for i, meta in enumerate(results["metadatas"][0], start=1):
-            print(f"{i}. {meta}")
+        logger.info("ASSISTANT: %s", answer)
 
-        chat_history.append(
-            {
-                "user": question,
-                "assistant": answer,
-            }
-        )
+        if SHOW_RETRIEVED_SOURCES:
+            print("\nRetrieved sources:")
+            for i, meta in enumerate(result["results"]["metadatas"][0], start=1):
+                print(f"{i}. {meta}")
+
+        memory.add_turn(question, answer)
 
 
 if __name__ == "__main__":

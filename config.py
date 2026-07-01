@@ -1,0 +1,29 @@
+from pathlib import Path
+
+DATA_DIR = Path("data")
+CHROMA_DIR = "chroma_db"
+COLLECTION_NAME = "my_documents"
+META_FILE = Path("collection_meta.json")
+LOG_DIR = Path("logs")
+LOG_FILE = LOG_DIR / "app.log"
+
+OLLAMA_MODEL = "qwen2.5:7b"
+EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
+
+CHUNK_SIZE = 1000
+CHUNK_OVERLAP = 200
+
+TOP_K = 4
+MULTI_QUERY_MAX_QUERIES = 3
+MULTI_QUERY_PER_QUERY_K = 4
+MULTI_QUERY_FINAL_K = 4
+
+MAX_HISTORY_TURNS = 6
+
+STRICT_DOC_MODE = True
+SHOW_QUERY_VARIANTS = True
+SHOW_RETRIEVED_SOURCES = True
+
+TYPO_MIN_WORD_LENGTH = 4
+TYPO_SIMILARITY_CUTOFF = 0.80
+MAX_TYPO_CORRECTIONS_PER_QUERY = 3

@@ -1,4 +1,5 @@
 import json
+import shutil
 from pathlib import Path
 
 import chromadb
@@ -6,11 +7,18 @@ from chromadb.utils import embedding_functions
 from docx import Document
 from pypdf import PdfReader
 
+from config import (
+    CHROMA_DIR,
+    CHUNK_OVERLAP,
+    CHUNK_SIZE,
+    COLLECTION_NAME,
+    DATA_DIR,
+    EMBEDDING_MODEL,
+    META_FILE,
+)
 
-DATA_DIR = Path("data")
-CHROMA_DIR = "chroma_db"
-COLLECTION_NAME = "my_documents"
-META_FILE = Path("collection_meta.json")
+
+RESET_DB_ON_START = False
 
 
 def read_txt(file_path: Path) -> str:
@@ -47,7 +55,7 @@ def load_file(file_path: Path) -> str:
     raise ValueError(f"Unsupported file type: {suffix}")
 
 
-def chunk_text(text: str, chunk_size: int = 1000, overlap: int = 200):
+def chunk_text(text: str, chunk_size: int = CHUNK_SIZE, overlap: int = CHUNK_OVERLAP):
     chunks = []
     start = 0
 
@@ -74,10 +82,13 @@ def main():
         print("The data folder does not exist.")
         return
 
+    if RESET_DB_ON_START and Path(CHROMA_DIR).exists():
+        shutil.rmtree(CHROMA_DIR)
+
     client = chromadb.PersistentClient(path=CHROMA_DIR)
 
     embedding_fn = embedding_functions.SentenceTransformerEmbeddingFunction(
-        model_name="sentence-transformers/all-MiniLM-L6-v2"
+        model_name=EMBEDDING_MODEL
     )
 
     collection = client.get_or_create_collection(
@@ -85,17 +96,11 @@ def main():
         embedding_function=embedding_fn,
     )
 
-    existing = collection.get()
-    existing_ids = existing.get("ids", [])
-    if existing_ids:
-        print("Warning: collection already contains data.")
-        print("If you want a clean rebuild, delete the chroma_db folder first.")
-
     file_records = []
     doc_count = 0
     chunk_count = 0
 
-    for file_path in DATA_DIR.glob("**/*"):
+    for file_path in sorted(DATA_DIR.glob("**/*")):
         if file_path.is_dir():
             continue
 
@@ -123,11 +128,28 @@ def main():
             )
 
         if documents:
-            collection.add(
-                ids=ids,
-                documents=documents,
-                metadatas=metadatas,
-            )
+            try:
+                existing_ids = collection.get(ids=ids).get("ids", [])
+                existing_id_set = set(existing_ids)
+            except Exception:
+                existing_id_set = set()
+
+            final_ids = []
+            final_docs = []
+            final_metas = []
+
+            for idx, doc, meta in zip(ids, documents, metadatas):
+                if idx not in existing_id_set:
+                    final_ids.append(idx)
+                    final_docs.append(doc)
+                    final_metas.append(meta)
+
+            if final_docs:
+                collection.add(
+                    ids=final_ids,
+                    documents=final_docs,
+                    metadatas=final_metas,
+                )
 
             file_records.append(
                 {

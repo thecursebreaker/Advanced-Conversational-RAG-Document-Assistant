@@ -1,0 +1,86 @@
+2026-07-01 23:43:17,263 | INFO | rag_app_2026-07-01_23-43-17 | session_log_file=logs\session_2026-07-01_23-43-17.log
+2026-07-01 23:43:17,264 | INFO | rag_app_2026-07-01_23-43-17 | application_start=true
+2026-07-01 23:44:12,574 | INFO | rag_app_2026-07-01_23-43-17 | USER: hello
+2026-07-01 23:44:12,575 | INFO | rag_app_2026-07-01_23-43-17 | route=chat
+2026-07-01 23:44:12,576 | INFO | rag_app_2026-07-01_23-43-17 | ASSISTANT: Hello! You can ask me about your indexed documents, the files I have indexed, or your current chat session.
+2026-07-01 23:44:19,134 | INFO | rag_app_2026-07-01_23-43-17 | USER: good morning
+2026-07-01 23:44:19,137 | INFO | rag_app_2026-07-01_23-43-17 | route=chat
+2026-07-01 23:44:19,138 | INFO | rag_app_2026-07-01_23-43-17 | ASSISTANT: Hello! Ask me about your indexed documents whenever you're ready.
+2026-07-01 23:44:22,102 | INFO | rag_app_2026-07-01_23-43-17 | USER: hell
+2026-07-01 23:44:22,104 | INFO | rag_app_2026-07-01_23-43-17 | route=document
+2026-07-01 23:44:35,557 | INFO | rag_app_2026-07-01_23-43-17 | query_variants=['Hello']
+2026-07-01 23:44:35,662 | INFO | rag_app_2026-07-01_23-43-17 | multi_query_retrieval_time_seconds=0.1039
+2026-07-01 23:44:36,401 | INFO | rag_app_2026-07-01_23-43-17 | relevance=False
+2026-07-01 23:44:36,402 | INFO | rag_app_2026-07-01_23-43-17 | ASSISTANT: I could not find that in the provided documents.
+2026-07-01 23:44:42,989 | INFO | rag_app_2026-07-01_23-43-17 | USER: he;p
+2026-07-01 23:44:42,989 | INFO | rag_app_2026-07-01_23-43-17 | route=document
+2026-07-01 23:44:43,508 | INFO | rag_app_2026-07-01_23-43-17 | query_variants=['Hello']
+2026-07-01 23:44:43,522 | INFO | rag_app_2026-07-01_23-43-17 | multi_query_retrieval_time_seconds=0.0138
+2026-07-01 23:44:44,267 | INFO | rag_app_2026-07-01_23-43-17 | relevance=False
+2026-07-01 23:44:44,268 | INFO | rag_app_2026-07-01_23-43-17 | ASSISTANT: I could not find that in the provided documents.
+2026-07-01 23:44:45,733 | INFO | rag_app_2026-07-01_23-43-17 | USER: help
+2026-07-01 23:44:45,733 | INFO | rag_app_2026-07-01_23-43-17 | route=control
+2026-07-01 23:44:45,734 | INFO | rag_app_2026-07-01_23-43-17 | ASSISTANT: You can ask:
+- document questions, e.g. 'who wrote the report?'
+- file/meta questions, e.g. 'what files do you have?'
+- file position questions, e.g. 'what is the second document about?'
+- memory questions, e.g. 'what did I ask 3 questions ago?'
+- control commands: help, reset, exit
+2026-07-01 23:44:53,293 | INFO | rag_app_2026-07-01_23-43-17 | USER: who wrote the report
+2026-07-01 23:44:53,294 | INFO | rag_app_2026-07-01_23-43-17 | route=document
+2026-07-01 23:44:54,330 | INFO | rag_app_2026-07-01_23-43-17 | query_variants=['who wrote the report', 'what is the author of the report']
+2026-07-01 23:44:54,359 | INFO | rag_app_2026-07-01_23-43-17 | multi_query_retrieval_time_seconds=0.0292
+2026-07-01 23:44:57,032 | INFO | rag_app_2026-07-01_23-43-17 | relevance=False
+2026-07-01 23:44:57,033 | INFO | rag_app_2026-07-01_23-43-17 | ASSISTANT: I could not find that in the provided documents.
+2026-07-01 23:45:01,141 | INFO | rag_app_2026-07-01_23-43-17 | USER: what do you know
+2026-07-01 23:45:01,141 | INFO | rag_app_2026-07-01_23-43-17 | route=meta
+2026-07-01 23:45:01,142 | INFO | rag_app_2026-07-01_23-43-17 | ASSISTANT: I currently have access to 87 indexed file(s).
+
+Files:
+- 2023_06_01T171357-9to5linux-First_Arch_Linux_ISO_Powered_by_Linux_Kernel_63_Is_Now_Available_for_Download.pdf (.pdf, 4 chunks)
+- 2023_07_02T154241-You_Can_Now_Install_Linux_Kernel_64_on_Ubuntu_Heres_How.pdf (.pdf, 7 chunks)
+- 2023_07_06T103634-New_TUXEDO_Stellaris_17_Linux_Laptop_Promises_the_Fastest_Notebook_Hardware_on_the_Planet.pdf (.pdf, 6 chunks)
+- 2023_07_06T163402-KDE_Gear_23043_Is_Out_as_the_Last_Update_in_the_Series_to_Fix_More_Bugs.pdf (.pdf, 4 chunks)
+- 2023_07_06T171421-Immutable_Distro_blendOS_3_Now_Officially_Available_Based_on_Arch_Linux.pdf (.pdf, 4 chunks)
+- 2023_07_08T142040-KDE_Frameworks_5108_Released_with_Various_Bug_Fixes_and_Improvements.pdf (.pdf, 4 chunks)
+- 2023_07_09T113824-How_to_Install_the_Latest_GNOME_AlphaBeta_Versions_on_Arch_Linux.pdf (.pdf, 5 chunks)
+- 2023_07_09T211322-Linus_Torvalds_Announces_First_Linux_Kernel_65_Release_Candidate.pdf (.pdf, 6 chunks)
+- 2023_07_09T234956-Ubuntu_Based_Linux_Lite_66_Comes_with_an_AI_Helper_Now_Available_for_Testing.pdf (.pdf, 4 chunks)
+- 2023_07_10T103011-9to5Linux_Weekly_Roundup_July_9th_2023.pdf (.pdf, 3 chunks)
+- 2023_07_10T232957-New_Steam_Client_Stable_Update_Fixes_UI_Issues_on_Linux_for_IntelAMD_Users.pdf (.pdf, 4 chunks)
+- 2023_07_11T120236-SUSE_Announces_Free_RHEL_Fork_to_Preserve_Choice_in_Enterprise_Linux.pdf (.pdf, 5 chunks)
+- 2023_07_11T134111-fwupd_193_Adds_Support_for_More_Thunderbolt_4_Docks_TUXEDO_InfinityBook_Pro_13_v3.pdf (.pdf, 4 chunks)
+- 2023_07_11T190013-Mozilla_Thunderbird_115_Released_with_Supernova_UI_OpenPGP_Improvements.pdf (.pdf, 6 chunks)
+- 2023_07_11T202150-Linux_Kernel_63_Reaches_End_of_Life_Users_Urged_to_Upgrade_to_Linux_64.pdf (.pdf, 5 chunks)
+- 2023_07_13T165154-Star_Labs_Unveils_the_Byte_Mk_II_Mini_Linux_PC_Drops_AMD_for_Intel_CPU.pdf (.pdf, 4 chunks)
+- 2023_07_14T021812-Linux_Mint_212_Victoria_Is_Now_Available_for_Download_Heres_Whats_New.pdf (.pdf, 6 chunks)
+- 2023_07_17T122255-9to5Linux_Weekly_Roundup_July_16th_2023.pdf (.pdf, 3 chunks)
+- 2023_07_17T134636-SparkyLinux_202307_Rolling_Brings_Debian_13_Trixies_Packages_Secure_Boot_and_More.pdf (.pdf, 5 chunks)
+- 2023_08_21T095734-9to5Linux_Weekly_Roundup_August_20th_2023.pdf (.pdf, 3 chunks)
+
+...and 67 more file(s).
+2026-07-01 23:45:22,646 | INFO | rag_app_2026-07-01_23-43-17 | USER: what did i ask 3 questions ago
+2026-07-01 23:45:22,646 | INFO | rag_app_2026-07-01_23-43-17 | route=memory
+2026-07-01 23:45:22,648 | INFO | rag_app_2026-07-01_23-43-17 | ASSISTANT: 3 question(s) ago, you asked: "help"
+2026-07-01 23:45:30,735 | INFO | rag_app_2026-07-01_23-43-17 | USER: what did i say 1 question ago
+2026-07-01 23:45:30,736 | INFO | rag_app_2026-07-01_23-43-17 | route=document
+2026-07-01 23:45:32,252 | INFO | rag_app_2026-07-01_23-43-17 | query_variants=['what did i say 1 question ago']
+2026-07-01 23:45:32,269 | INFO | rag_app_2026-07-01_23-43-17 | multi_query_retrieval_time_seconds=0.0174
+2026-07-01 23:45:33,052 | INFO | rag_app_2026-07-01_23-43-17 | relevance=False
+2026-07-01 23:45:33,053 | INFO | rag_app_2026-07-01_23-43-17 | ASSISTANT: I could not find that in the provided documents.
+2026-07-01 23:45:40,974 | INFO | rag_app_2026-07-01_23-43-17 | USER: what did you answer 2 questions ago
+2026-07-01 23:45:40,975 | INFO | rag_app_2026-07-01_23-43-17 | route=memory
+2026-07-01 23:45:40,976 | INFO | rag_app_2026-07-01_23-43-17 | ASSISTANT: 2 question(s) ago, you asked: "what did i ask 3 questions ago"
+2026-07-01 23:45:57,774 | INFO | rag_app_2026-07-01_23-43-17 | USER: how many questions did i ask so far
+2026-07-01 23:45:57,774 | INFO | rag_app_2026-07-01_23-43-17 | route=memory
+2026-07-01 23:45:57,775 | INFO | rag_app_2026-07-01_23-43-17 | ASSISTANT: You have asked 10 question(s) so far.
+2026-07-01 23:46:07,022 | INFO | rag_app_2026-07-01_23-43-17 | USER: when is arc linux available for download
+2026-07-01 23:46:07,022 | INFO | rag_app_2026-07-01_23-43-17 | route=document
+2026-07-01 23:46:09,068 | INFO | rag_app_2026-07-01_23-43-17 | query_variants=['When is Arx Linux available for download?', 'When is Arch Linux available for download?']
+2026-07-01 23:46:09,095 | INFO | rag_app_2026-07-01_23-43-17 | multi_query_retrieval_time_seconds=0.0265
+2026-07-01 23:46:12,314 | INFO | rag_app_2026-07-01_23-43-17 | relevance=False
+2026-07-01 23:46:12,315 | INFO | rag_app_2026-07-01_23-43-17 | ASSISTANT: I could not find that in the provided documents.
+2026-07-01 23:47:14,341 | INFO | rag_app_2026-07-01_23-43-17 | USER: exit
+2026-07-01 23:47:14,341 | INFO | rag_app_2026-07-01_23-43-17 | route=control
+2026-07-01 23:47:14,342 | INFO | rag_app_2026-07-01_23-43-17 | ASSISTANT: Goodbye.
+2026-07-01 23:47:14,342 | INFO | rag_app_2026-07-01_23-43-17 | application_exit=true

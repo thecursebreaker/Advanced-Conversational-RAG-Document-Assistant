@@ -1,8 +1,5 @@
-langchain
-langchain-community
-langchain-text-splitters
-langchain-ollama
 chromadb
 sentence-transformers
 pypdf
 python-docx
+langchain-ollama

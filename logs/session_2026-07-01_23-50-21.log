@@ -1,0 +1,36 @@
+2026-07-01 23:50:21,000 | INFO | rag_app_2026-07-01_23-50-21 | session_log_file=logs\session_2026-07-01_23-50-21.log
+2026-07-01 23:50:21,001 | INFO | rag_app_2026-07-01_23-50-21 | application_start=true
+2026-07-01 23:50:32,607 | INFO | rag_app_2026-07-01_23-50-21 | USER: hello
+2026-07-01 23:50:32,607 | INFO | rag_app_2026-07-01_23-50-21 | route=chat
+2026-07-01 23:50:32,608 | INFO | rag_app_2026-07-01_23-50-21 | ASSISTANT: Hello! You can ask me about your indexed documents, the files I have indexed, or your current chat session.
+2026-07-01 23:50:33,493 | INFO | rag_app_2026-07-01_23-50-21 | USER: hell
+2026-07-01 23:50:33,497 | INFO | rag_app_2026-07-01_23-50-21 | route=document
+2026-07-01 23:50:34,580 | INFO | rag_app_2026-07-01_23-50-21 | query_variants=['Hello']
+2026-07-01 23:50:34,657 | INFO | rag_app_2026-07-01_23-50-21 | multi_query_retrieval_time_seconds=0.0762
+2026-07-01 23:50:35,506 | INFO | rag_app_2026-07-01_23-50-21 | relevance=False
+2026-07-01 23:50:35,506 | INFO | rag_app_2026-07-01_23-50-21 | ASSISTANT: I could not find that in the provided documents.
+2026-07-01 23:50:43,496 | INFO | rag_app_2026-07-01_23-50-21 | USER: when is arc linux available for download
+2026-07-01 23:50:43,496 | INFO | rag_app_2026-07-01_23-50-21 | route=document
+2026-07-01 23:50:44,947 | INFO | rag_app_2026-07-01_23-50-21 | query_variants=['When is Arx Linux available for download?', 'When is Arch Linux available for download?']
+2026-07-01 23:50:44,971 | INFO | rag_app_2026-07-01_23-50-21 | multi_query_retrieval_time_seconds=0.0240
+2026-07-01 23:50:46,128 | INFO | rag_app_2026-07-01_23-50-21 | relevance=False
+2026-07-01 23:50:46,130 | INFO | rag_app_2026-07-01_23-50-21 | ASSISTANT: I could not find that in the provided documents.
+2026-07-01 23:50:56,296 | INFO | rag_app_2026-07-01_23-50-21 | USER: when is arch linux available
+2026-07-01 23:50:56,296 | INFO | rag_app_2026-07-01_23-50-21 | route=document
+2026-07-01 23:50:57,451 | INFO | rag_app_2026-07-01_23-50-21 | query_variants=['When is Arch Linux available for download?']
+2026-07-01 23:50:57,460 | INFO | rag_app_2026-07-01_23-50-21 | multi_query_retrieval_time_seconds=0.0087
+2026-07-01 23:51:02,116 | INFO | rag_app_2026-07-01_23-50-21 | relevance=True
+2026-07-01 23:51:06,023 | INFO | rag_app_2026-07-01_23-50-21 | retrieved_sources=[{'filename': '2023_06_01T171357-9to5linux-First_Arch_Linux_ISO_Powered_by_Linux_Kernel_63_Is_Now_Available_for_Download.pdf', 'chunk_index': 3, 'source': 'data\\2023_06_01T171357-9to5linux-First_Arch_Linux_ISO_Powered_by_Linux_Kernel_63_Is_Now_Available_for_Download.pdf'}, {'chunk_index': 1, 'filename': '2023_10_14T082419-Arch_Linuxs_October_2023_ISO_Release_Brings_Linux_65_Installer_Improvements.pdf', 'source': 'data\\2023_10_14T082419-Arch_Linuxs_October_2023_ISO_Release_Brings_Linux_65_Installer_Improvements.pdf'}, {'filename': '2023_10_14T082419-Arch_Linuxs_October_2023_ISO_Release_Brings_Linux_65_Installer_Improvements.pdf', 'chunk_index': 0, 'source': 'data\\2023_10_14T082419-Arch_Linuxs_October_2023_ISO_Release_Brings_Linux_65_Installer_Improvements.pdf'}, {'filename': '2023_06_01T171357-9to5linux-First_Arch_Linux_ISO_Powered_by_Linux_Kernel_63_Is_Now_Available_for_Download.pdf', 'chunk_index': 0, 'source': 'data\\2023_06_01T171357-9to5linux-First_Arch_Linux_ISO_Powered_by_Linux_Kernel_63_Is_Now_Available_for_Download.pdf'}]
+2026-07-01 23:51:06,024 | INFO | rag_app_2026-07-01_23-50-21 | ASSISTANT: Arch Linux's ISO snapshot for June 2023, powered by Linux kernel 6.3, was made available on 2023-06-01. The October 2023 ISO release followed with Linux kernel 6.5.
+
+[Source 1] and [Source 4]
+2026-07-01 23:51:20,750 | INFO | rag_app_2026-07-01_23-50-21 | USER: when is arx linux available for download
+2026-07-01 23:51:20,750 | INFO | rag_app_2026-07-01_23-50-21 | route=document
+2026-07-01 23:51:22,356 | INFO | rag_app_2026-07-01_23-50-21 | query_variants=['When is Arx Linux available for download?', 'When is Arch Linux available for download?']
+2026-07-01 23:51:22,380 | INFO | rag_app_2026-07-01_23-50-21 | multi_query_retrieval_time_seconds=0.0238
+2026-07-01 23:51:25,229 | INFO | rag_app_2026-07-01_23-50-21 | relevance=False
+2026-07-01 23:51:25,230 | INFO | rag_app_2026-07-01_23-50-21 | ASSISTANT: I could not find that in the provided documents.
+2026-07-01 23:53:38,980 | INFO | rag_app_2026-07-01_23-50-21 | USER: exit
+2026-07-01 23:53:38,980 | INFO | rag_app_2026-07-01_23-50-21 | route=control
+2026-07-01 23:53:38,981 | INFO | rag_app_2026-07-01_23-50-21 | ASSISTANT: Goodbye.
+2026-07-01 23:53:38,981 | INFO | rag_app_2026-07-01_23-50-21 | application_exit=true

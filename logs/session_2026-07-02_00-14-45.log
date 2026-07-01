@@ -1,0 +1,51 @@
+2026-07-02 00:14:45,383 | INFO | rag_app_2026-07-02_00-14-45 | session_log_file=logs\session_2026-07-02_00-14-45.log
+2026-07-02 00:14:45,383 | INFO | rag_app_2026-07-02_00-14-45 | application_start=true
+2026-07-02 00:15:00,013 | INFO | rag_app_2026-07-02_00-14-45 | USER: summarize what happened in 2023
+2026-07-02 00:15:00,014 | INFO | rag_app_2026-07-02_00-14-45 | route=document
+2026-07-02 00:15:01,427 | INFO | rag_app_2026-07-02_00-14-45 | fuzzy_corrected_question=summarize whats happened in 2023
+2026-07-02 00:15:01,427 | INFO | rag_app_2026-07-02_00-14-45 | raw_query_variants=['summarize what happened in 2023', 'Summarize what happened in 2023', 'Summarize the events of 2023']
+2026-07-02 00:15:01,431 | INFO | rag_app_2026-07-02_00-14-45 | filtered_query_variants=['summarize what happened in 2023', 'Summarize what happened in 2023', 'Summarize the events of 2023']
+2026-07-02 00:15:01,538 | INFO | rag_app_2026-07-02_00-14-45 | multi_query_retrieval_time_seconds=0.1070
+2026-07-02 00:15:01,538 | INFO | rag_app_2026-07-02_00-14-45 | normalized_question=summarize what happened in 2023
+2026-07-02 00:15:02,573 | INFO | rag_app_2026-07-02_00-14-45 | relevance=False
+2026-07-02 00:15:02,575 | INFO | rag_app_2026-07-02_00-14-45 | ASSISTANT: I could not find that in the provided documents.
+2026-07-02 00:15:08,727 | INFO | rag_app_2026-07-02_00-14-45 | USER: summarize what you know from 2023
+2026-07-02 00:15:08,728 | INFO | rag_app_2026-07-02_00-14-45 | route=document
+2026-07-02 00:15:10,356 | INFO | rag_app_2026-07-02_00-14-45 | fuzzy_corrected_question=summarize whats you know from 2023
+2026-07-02 00:15:10,356 | INFO | rag_app_2026-07-02_00-14-45 | raw_query_variants=['summarize what you know from 2023', 'Summarize what you know about 2023.', 'Summarize whats you know about 2023.']
+2026-07-02 00:15:10,356 | INFO | rag_app_2026-07-02_00-14-45 | filtered_query_variants=['summarize what you know from 2023', 'Summarize whats you know about 2023.', 'Summarize what you know about 2023.']
+2026-07-02 00:15:10,401 | INFO | rag_app_2026-07-02_00-14-45 | multi_query_retrieval_time_seconds=0.0452
+2026-07-02 00:15:10,402 | INFO | rag_app_2026-07-02_00-14-45 | normalized_question=summarize what you know from 2023
+2026-07-02 00:15:11,429 | INFO | rag_app_2026-07-02_00-14-45 | relevance=False
+2026-07-02 00:15:11,430 | INFO | rag_app_2026-07-02_00-14-45 | ASSISTANT: I could not find that in the provided documents.
+2026-07-02 00:15:18,054 | INFO | rag_app_2026-07-02_00-14-45 | USER: what documents do you have from 2023
+2026-07-02 00:15:18,055 | INFO | rag_app_2026-07-02_00-14-45 | route=meta
+2026-07-02 00:15:18,056 | INFO | rag_app_2026-07-02_00-14-45 | ASSISTANT: I currently have access to 87 indexed file(s).
+
+Files:
+- 2023_06_01T171357-9to5linux-First_Arch_Linux_ISO_Powered_by_Linux_Kernel_63_Is_Now_Available_for_Download.pdf (.pdf, 4 chunks)
+- 2023_07_02T154241-You_Can_Now_Install_Linux_Kernel_64_on_Ubuntu_Heres_How.pdf (.pdf, 7 chunks)
+- 2023_07_06T103634-New_TUXEDO_Stellaris_17_Linux_Laptop_Promises_the_Fastest_Notebook_Hardware_on_the_Planet.pdf (.pdf, 6 chunks)
+- 2023_07_06T163402-KDE_Gear_23043_Is_Out_as_the_Last_Update_in_the_Series_to_Fix_More_Bugs.pdf (.pdf, 4 chunks)
+- 2023_07_06T171421-Immutable_Distro_blendOS_3_Now_Officially_Available_Based_on_Arch_Linux.pdf (.pdf, 4 chunks)
+- 2023_07_08T142040-KDE_Frameworks_5108_Released_with_Various_Bug_Fixes_and_Improvements.pdf (.pdf, 4 chunks)
+- 2023_07_09T113824-How_to_Install_the_Latest_GNOME_AlphaBeta_Versions_on_Arch_Linux.pdf (.pdf, 5 chunks)
+- 2023_07_09T211322-Linus_Torvalds_Announces_First_Linux_Kernel_65_Release_Candidate.pdf (.pdf, 6 chunks)
+- 2023_07_09T234956-Ubuntu_Based_Linux_Lite_66_Comes_with_an_AI_Helper_Now_Available_for_Testing.pdf (.pdf, 4 chunks)
+- 2023_07_10T103011-9to5Linux_Weekly_Roundup_July_9th_2023.pdf (.pdf, 3 chunks)
+- 2023_07_10T232957-New_Steam_Client_Stable_Update_Fixes_UI_Issues_on_Linux_for_IntelAMD_Users.pdf (.pdf, 4 chunks)
+- 2023_07_11T120236-SUSE_Announces_Free_RHEL_Fork_to_Preserve_Choice_in_Enterprise_Linux.pdf (.pdf, 5 chunks)
+- 2023_07_11T134111-fwupd_193_Adds_Support_for_More_Thunderbolt_4_Docks_TUXEDO_InfinityBook_Pro_13_v3.pdf (.pdf, 4 chunks)
+- 2023_07_11T190013-Mozilla_Thunderbird_115_Released_with_Supernova_UI_OpenPGP_Improvements.pdf (.pdf, 6 chunks)
+- 2023_07_11T202150-Linux_Kernel_63_Reaches_End_of_Life_Users_Urged_to_Upgrade_to_Linux_64.pdf (.pdf, 5 chunks)
+- 2023_07_13T165154-Star_Labs_Unveils_the_Byte_Mk_II_Mini_Linux_PC_Drops_AMD_for_Intel_CPU.pdf (.pdf, 4 chunks)
+- 2023_07_14T021812-Linux_Mint_212_Victoria_Is_Now_Available_for_Download_Heres_Whats_New.pdf (.pdf, 6 chunks)
+- 2023_07_17T122255-9to5Linux_Weekly_Roundup_July_16th_2023.pdf (.pdf, 3 chunks)
+- 2023_07_17T134636-SparkyLinux_202307_Rolling_Brings_Debian_13_Trixies_Packages_Secure_Boot_and_More.pdf (.pdf, 5 chunks)
+- 2023_08_21T095734-9to5Linux_Weekly_Roundup_August_20th_2023.pdf (.pdf, 3 chunks)
+
+...and 67 more file(s).
+2026-07-02 00:15:38,047 | INFO | rag_app_2026-07-02_00-14-45 | USER: exit
+2026-07-02 00:15:38,047 | INFO | rag_app_2026-07-02_00-14-45 | route=control
+2026-07-02 00:15:38,048 | INFO | rag_app_2026-07-02_00-14-45 | ASSISTANT: Goodbye.
+2026-07-02 00:15:38,048 | INFO | rag_app_2026-07-02_00-14-45 | application_exit=true

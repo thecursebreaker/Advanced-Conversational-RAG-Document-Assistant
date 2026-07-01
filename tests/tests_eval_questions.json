@@ -1,0 +1,22 @@
+[
+  {
+    "question": "what files do you have",
+    "expected_route": "meta"
+  },
+  {
+    "question": "hello",
+    "expected_route": "chat"
+  },
+  {
+    "question": "how many questions have i asked",
+    "expected_route": "memory"
+  },
+  {
+    "question": "what is morality",
+    "expected_route": "general"
+  },
+  {
+    "question": "who wrote the report",
+    "expected_route": "document"
+  }
+]
