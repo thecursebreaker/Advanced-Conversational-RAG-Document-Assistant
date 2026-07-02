@@ -1,0 +1,19 @@
+2026-07-02 13:48:46,736 | INFO | rag_app_2026-07-02_13-48-46 | session_log_file=logs\session_2026-07-02_13-48-46.log
+2026-07-02 13:48:46,736 | INFO | rag_app_2026-07-02_13-48-46 | application_start=true
+2026-07-02 13:49:00,086 | INFO | rag_app_2026-07-02_13-48-46 | USER: what happed in 2023
+2026-07-02 13:49:00,088 | INFO | rag_app_2026-07-02_13-48-46 | route=document
+2026-07-02 13:49:01,335 | INFO | rag_app_2026-07-02_13-48-46 | fuzzy_corrected_question=events in documents from t120236
+2026-07-02 13:49:01,335 | INFO | rag_app_2026-07-02_13-48-46 | raw_query_variants=['events in documents from t120236', 'what happened in 2023', 'events in 2023']
+2026-07-02 13:49:01,339 | INFO | rag_app_2026-07-02_13-48-46 | filtered_query_variants=['what happened in 2023', 'events in 2023']
+2026-07-02 13:49:01,444 | INFO | rag_app_2026-07-02_13-48-46 | multi_query_retrieval_time_seconds=0.1048
+2026-07-02 13:49:01,444 | INFO | rag_app_2026-07-02_13-48-46 | normalized_question=what happened in 2023
+2026-07-02 13:49:01,800 | INFO | rag_app_2026-07-02_13-48-46 | relevance=False
+2026-07-02 13:49:01,800 | INFO | rag_app_2026-07-02_13-48-46 | low_confidence_relevance=true
+2026-07-02 13:49:03,572 | INFO | rag_app_2026-07-02_13-48-46 | retrieved_sources=[{'filename': '2023_10_02T075900-9to5Linux_Weekly_Roundup_October_1st_2023.pdf', 'chunk_index': 3, 'source': 'data\\2023_10_02T075900-9to5Linux_Weekly_Roundup_October_1st_2023.pdf'}, {'filename': '2023_08_23T221148-Kali_Linux_20233_Released_with_9_New_Tools_for_Ethical_Hacking_Linux_Kernel_63.pdf', 'chunk_index': 0, 'source': 'data\\2023_08_23T221148-Kali_Linux_20233_Released_with_9_New_Tools_for_Ethical_Hacking_Linux_Kernel_63.pdf'}, {'source': 'data\\2023_09_25T024112-9to5Linux_Weekly_Roundup_September_24th_2023.pdf', 'filename': '2023_09_25T024112-9to5Linux_Weekly_Roundup_September_24th_2023.pdf', 'chunk_index': 0}, {'source': 'data\\2023_10_09T103945-9to5Linux_Weekly_Roundup_October_8th_2023.pdf', 'filename': '2023_10_09T103945-9to5Linux_Weekly_Roundup_October_8th_2023.pdf', 'chunk_index': 3}]
+2026-07-02 13:49:03,574 | INFO | rag_app_2026-07-02_13-48-46 | ASSISTANT: Kali Linux 2023.3 was released in August 2023, bringing with it updates to the Linux kernel and various other improvements.
+
+[Source 2]
+2026-07-02 13:54:52,615 | INFO | rag_app_2026-07-02_13-48-46 | USER: exit
+2026-07-02 13:54:52,615 | INFO | rag_app_2026-07-02_13-48-46 | route=control
+2026-07-02 13:54:52,616 | INFO | rag_app_2026-07-02_13-48-46 | ASSISTANT: Goodbye.
+2026-07-02 13:54:52,616 | INFO | rag_app_2026-07-02_13-48-46 | application_exit=true

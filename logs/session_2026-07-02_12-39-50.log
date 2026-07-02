@@ -1,0 +1,31 @@
+2026-07-02 12:39:50,409 | INFO | rag_app_2026-07-02_12-39-50 | session_log_file=logs\session_2026-07-02_12-39-50.log
+2026-07-02 12:39:50,410 | INFO | rag_app_2026-07-02_12-39-50 | application_start=true
+2026-07-02 12:40:00,192 | INFO | rag_app_2026-07-02_12-39-50 | USER: what happened in 2023
+2026-07-02 12:40:00,193 | INFO | rag_app_2026-07-02_12-39-50 | route=corpus_summary
+2026-07-02 12:40:06,736 | INFO | rag_app_2026-07-02_12-39-50 | corpus_summary_raw_query_variants=['what happened in 2023', 'events in 2023', 'events mentioned in the documents whats happened in 2023']
+2026-07-02 12:40:06,737 | INFO | rag_app_2026-07-02_12-39-50 | corpus_summary_filtered_query_variants=['events mentioned in the documents whats happened in 2023', 'what happened in 2023', 'events in 2023']
+2026-07-02 12:40:06,855 | INFO | rag_app_2026-07-02_12-39-50 | corpus_summary_retrieval_time_seconds=0.1184
+2026-07-02 12:40:10,557 | INFO | rag_app_2026-07-02_12-39-50 | ASSISTANT: - Kali Linux 2023.3 released with new tools and kernel update
+- Ubuntu 23.10 announced for upcoming release
+- KDE Gear 23.08.2 announced for release
+- Arch Linux October 2023 ISO snapshot released
+- GNOME 44.3 announced for release
+2026-07-02 12:42:32,464 | INFO | rag_app_2026-07-02_12-39-50 | USER: summarize events in documents
+2026-07-02 12:42:32,465 | INFO | rag_app_2026-07-02_12-39-50 | route=corpus_summary
+2026-07-02 12:42:33,608 | INFO | rag_app_2026-07-02_12-39-50 | corpus_summary_raw_query_variants=['summarize events in documents', 'what happened in 2023', 'events mentioned in the documents']
+2026-07-02 12:42:33,608 | INFO | rag_app_2026-07-02_12-39-50 | corpus_summary_filtered_query_variants=['summarize events in documents', 'what happened in 2023', 'events mentioned in the documents']
+2026-07-02 12:42:33,654 | INFO | rag_app_2026-07-02_12-39-50 | corpus_summary_retrieval_time_seconds=0.0450
+2026-07-02 12:42:43,441 | INFO | rag_app_2026-07-02_12-39-50 | ASSISTANT: - KDE Gear 23.08 released with new features and updates (Source 1)
+- Okular document viewer in KDE Gear 23.08 updated to support adding signature metadata and other enhancements (Source 1)
+- Kalendar app renamed to Merkuro, now featuring contact management capabilities (Source 1)
+- Itinerary updated in KDE Gear 23.08.2 for better functionality (Source 6)
+- LibreOffice 7.6 released with new features and improvements (Source 2)
+- Kali Linux 2023.3 released with new tools, kernel update, and various bug fixes (Source 4)
+- KDE Gear 23.08.2 released for more bug fixes and improvements in favorite KDE apps (Source 6)
+- Mozilla Thunderbird 115 released with Supernova UI improvements and OpenPGP enhancements (Source 7)
+
+These events are extracted from the provided context, representing software releases, updates, and notable changes mentioned in the documents.
+2026-07-02 12:46:46,145 | INFO | rag_app_2026-07-02_12-39-50 | USER: exit
+2026-07-02 12:46:46,145 | INFO | rag_app_2026-07-02_12-39-50 | route=control
+2026-07-02 12:46:46,146 | INFO | rag_app_2026-07-02_12-39-50 | ASSISTANT: Goodbye.
+2026-07-02 12:46:46,146 | INFO | rag_app_2026-07-02_12-39-50 | application_exit=true

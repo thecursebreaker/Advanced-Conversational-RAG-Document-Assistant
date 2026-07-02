@@ -1,0 +1,17 @@
+2026-07-02 13:12:08,198 | INFO | rag_app_2026-07-02_13-12-08 | session_log_file=logs\session_2026-07-02_13-12-08.log
+2026-07-02 13:12:08,198 | INFO | rag_app_2026-07-02_13-12-08 | application_start=true
+2026-07-02 13:12:37,738 | INFO | rag_app_2026-07-02_13-12-08 | USER: what happed in 2023
+2026-07-02 13:12:37,740 | INFO | rag_app_2026-07-02_13-12-08 | route=document
+2026-07-02 13:12:44,585 | INFO | rag_app_2026-07-02_13-12-08 | fuzzy_corrected_question=events in documents from t120236
+2026-07-02 13:12:44,585 | INFO | rag_app_2026-07-02_13-12-08 | raw_query_variants=['events in documents from t120236', 'what happened in 2023', 'events in 2023']
+2026-07-02 13:12:44,588 | INFO | rag_app_2026-07-02_13-12-08 | filtered_query_variants=['events in documents from t120236']
+2026-07-02 13:12:44,679 | INFO | rag_app_2026-07-02_13-12-08 | multi_query_retrieval_time_seconds=0.0909
+2026-07-02 13:12:44,680 | INFO | rag_app_2026-07-02_13-12-08 | normalized_question=events in documents from t120236
+2026-07-02 13:12:45,390 | INFO | rag_app_2026-07-02_13-12-08 | relevance=False
+2026-07-02 13:12:45,390 | INFO | rag_app_2026-07-02_13-12-08 | low_confidence_relevance=true
+2026-07-02 13:12:46,490 | INFO | rag_app_2026-07-02_13-12-08 | retrieved_sources=[{'source': 'data\\2023_10_12T121202-KDE_Gear_23082_Released_with_More_Fixes_for_Your_Favorite_KDE_Apps.pdf', 'filename': '2023_10_12T121202-KDE_Gear_23082_Released_with_More_Fixes_for_Your_Favorite_KDE_Apps.pdf', 'chunk_index': 3}, {'source': 'data\\2023_08_24T150040-KDE_Gear_2308_Released_with_Lots_of_Goodies_for_Your_Favorite_KDE_Apps.pdf', 'filename': '2023_08_24T150040-KDE_Gear_2308_Released_with_Lots_of_Goodies_for_Your_Favorite_KDE_Apps.pdf', 'chunk_index': 2}]
+2026-07-02 13:12:46,491 | INFO | rag_app_2026-07-02_13-12-08 | ASSISTANT: I could not find that in the provided documents.
+2026-07-02 13:20:35,737 | INFO | rag_app_2026-07-02_13-12-08 | USER: exit
+2026-07-02 13:20:35,737 | INFO | rag_app_2026-07-02_13-12-08 | route=control
+2026-07-02 13:20:35,738 | INFO | rag_app_2026-07-02_13-12-08 | ASSISTANT: Goodbye.
+2026-07-02 13:20:35,738 | INFO | rag_app_2026-07-02_13-12-08 | application_exit=true

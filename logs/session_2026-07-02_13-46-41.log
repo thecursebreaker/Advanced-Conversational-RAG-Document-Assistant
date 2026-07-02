@@ -1,0 +1,17 @@
+2026-07-02 13:46:41,751 | INFO | rag_app_2026-07-02_13-46-41 | session_log_file=logs\session_2026-07-02_13-46-41.log
+2026-07-02 13:46:41,751 | INFO | rag_app_2026-07-02_13-46-41 | application_start=true
+2026-07-02 13:46:51,551 | INFO | rag_app_2026-07-02_13-46-41 | USER: what happed in 2023
+2026-07-02 13:46:51,553 | INFO | rag_app_2026-07-02_13-46-41 | route=document
+2026-07-02 13:47:03,338 | INFO | rag_app_2026-07-02_13-46-41 | fuzzy_corrected_question=events in documents from t120236
+2026-07-02 13:47:03,338 | INFO | rag_app_2026-07-02_13-46-41 | raw_query_variants=['events in documents from t120236', 'what happened in 2023', 'events in 2023']
+2026-07-02 13:47:03,341 | INFO | rag_app_2026-07-02_13-46-41 | filtered_query_variants=['what happened in 2023', 'events in 2023']
+2026-07-02 13:47:03,444 | INFO | rag_app_2026-07-02_13-46-41 | multi_query_retrieval_time_seconds=0.1021
+2026-07-02 13:47:03,444 | INFO | rag_app_2026-07-02_13-46-41 | normalized_question=what happened in 2023
+2026-07-02 13:47:04,501 | INFO | rag_app_2026-07-02_13-46-41 | relevance=False
+2026-07-02 13:47:04,501 | INFO | rag_app_2026-07-02_13-46-41 | low_confidence_relevance=true
+2026-07-02 13:47:07,496 | INFO | rag_app_2026-07-02_13-46-41 | retrieved_sources=[{'filename': '2023_10_02T075900-9to5Linux_Weekly_Roundup_October_1st_2023.pdf', 'chunk_index': 3, 'source': 'data\\2023_10_02T075900-9to5Linux_Weekly_Roundup_October_1st_2023.pdf'}, {'chunk_index': 0, 'source': 'data\\2023_08_23T221148-Kali_Linux_20233_Released_with_9_New_Tools_for_Ethical_Hacking_Linux_Kernel_63.pdf', 'filename': '2023_08_23T221148-Kali_Linux_20233_Released_with_9_New_Tools_for_Ethical_Hacking_Linux_Kernel_63.pdf'}, {'filename': '2023_09_25T024112-9to5Linux_Weekly_Roundup_September_24th_2023.pdf', 'source': 'data\\2023_09_25T024112-9to5Linux_Weekly_Roundup_September_24th_2023.pdf', 'chunk_index': 0}, {'source': 'data\\2023_10_09T103945-9to5Linux_Weekly_Roundup_October_8th_2023.pdf', 'chunk_index': 3, 'filename': '2023_10_09T103945-9to5Linux_Weekly_Roundup_October_8th_2023.pdf'}]
+2026-07-02 13:47:07,497 | INFO | rag_app_2026-07-02_13-46-41 | ASSISTANT: I could not find that in the provided documents.
+2026-07-02 13:48:35,719 | INFO | rag_app_2026-07-02_13-46-41 | USER: exit
+2026-07-02 13:48:35,720 | INFO | rag_app_2026-07-02_13-46-41 | route=control
+2026-07-02 13:48:35,721 | INFO | rag_app_2026-07-02_13-46-41 | ASSISTANT: Goodbye.
+2026-07-02 13:48:35,721 | INFO | rag_app_2026-07-02_13-46-41 | application_exit=true

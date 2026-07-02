@@ -1,0 +1,93 @@
+2026-07-02 01:57:45,396 | INFO | rag_app_2026-07-02_01-57-45 | session_log_file=logs\session_2026-07-02_01-57-45.log
+2026-07-02 01:57:45,396 | INFO | rag_app_2026-07-02_01-57-45 | application_start=true
+2026-07-02 01:58:09,559 | INFO | rag_app_2026-07-02_01-57-45 | USER: summarize events that happened in 2023
+2026-07-02 01:58:09,560 | INFO | rag_app_2026-07-02_01-57-45 | route=corpus_summary
+2026-07-02 01:58:16,192 | INFO | rag_app_2026-07-02_01-57-45 | corpus_summary_raw_query_variants=['summarize events of 2023', 'summarize 2023 events', 'summarize events that happened in 2023']
+2026-07-02 01:58:16,196 | INFO | rag_app_2026-07-02_01-57-45 | corpus_summary_filtered_query_variants=['summarize events of 2023', 'summarize 2023 events', 'summarize events that happened in 2023']
+2026-07-02 01:58:16,305 | INFO | rag_app_2026-07-02_01-57-45 | corpus_summary_retrieval_time_seconds=0.1092
+2026-07-02 01:58:21,139 | INFO | rag_app_2026-07-02_01-57-45 | ASSISTANT: I could not find that in the provided documents.
+2026-07-02 01:58:26,847 | INFO | rag_app_2026-07-02_01-57-45 | USER: what happened in 2023
+2026-07-02 01:58:26,847 | INFO | rag_app_2026-07-02_01-57-45 | route=corpus_summary
+2026-07-02 01:58:28,080 | INFO | rag_app_2026-07-02_01-57-45 | corpus_summary_raw_query_variants=['what happened in 2023', 'whats happening in 2023', 'whats happened in 2023']
+2026-07-02 01:58:28,080 | INFO | rag_app_2026-07-02_01-57-45 | corpus_summary_filtered_query_variants=['whats happening in 2023', 'whats happened in 2023', 'what happened in 2023']
+2026-07-02 01:58:28,139 | INFO | rag_app_2026-07-02_01-57-45 | corpus_summary_retrieval_time_seconds=0.0584
+2026-07-02 01:58:32,338 | INFO | rag_app_2026-07-02_01-57-45 | ASSISTANT: I could not find that in the provided documents.
+2026-07-02 01:58:34,820 | INFO | rag_app_2026-07-02_01-57-45 | USER: what topics are covered in these documents
+2026-07-02 01:58:34,820 | INFO | rag_app_2026-07-02_01-57-45 | route=corpus_summary
+2026-07-02 01:58:36,089 | INFO | rag_app_2026-07-02_01-57-45 | corpus_summary_raw_query_variants=['what topics are covered in these documents', 'whats topics are covered in those documents']
+2026-07-02 01:58:36,089 | INFO | rag_app_2026-07-02_01-57-45 | corpus_summary_filtered_query_variants=['whats topics are covered in those documents']
+2026-07-02 01:58:36,105 | INFO | rag_app_2026-07-02_01-57-45 | corpus_summary_retrieval_time_seconds=0.0157
+2026-07-02 01:58:48,900 | INFO | rag_app_2026-07-02_01-57-45 | ASSISTANT: The documents cover updates and improvements for LibreOffice 7.6 and Geany 2.0.
+
+**LibreOffice 7.6:**
+- Introduced support for zoom gestures on touchpads.
+- Added features like a new Page Number Wizard in Writer, improved paragraph style handling, and enhanced dictionary items of Hunspell and custom dictionaries.
+- Improved font handling, especially for right-to-left scripts, CJK, and Asian alphabets.
+- Enhanced Calc with pivot table layouts, autofilter support, and various other improvements.
+
+**Geany 2.0:**
+- Includes experimental Meson build system support.
+- Features improved UI elements such as a new tree view by default and enhanced symbol filtering.
+- Enhancements in filetype support for programming languages like PHP, Nim, Kotlin, Python, and markdown.
+- Supports dark-themed friendly colors for compiler messages.
+- Improvements in session data management and auto-completion for C/C++.
+
+For more details, you can refer to the full changelogs provided. [Source 1: data\2023_08_21T100042-LibreOffice_76_Open_Source_Office_Suite_Officially_Released_This_Is_Whats_New.pdf, chunk 1 and 2] [Source 3: data\2023_10_19T170854-Geany_20_Open_Source_IDE_Released_with_UI_Improvements_Initial_Meson_Support.pdf, chunk 3 and 2].
+2026-07-02 01:59:17,951 | INFO | rag_app_2026-07-02_01-57-45 | USER: summarize the documents
+2026-07-02 01:59:17,951 | INFO | rag_app_2026-07-02_01-57-45 | route=corpus_summary
+2026-07-02 01:59:20,066 | INFO | rag_app_2026-07-02_01-57-45 | corpus_summary_raw_query_variants=['summarize the documents about LibreOffice 7.6 and Geany 2.0', 'summarize the changelogs for LibreOffice 7.6 and Geany 2.0', 'summarize the documents']
+2026-07-02 01:59:20,066 | INFO | rag_app_2026-07-02_01-57-45 | corpus_summary_filtered_query_variants=['summarize the documents about LibreOffice 7.6 and Geany 2.0', 'summarize the changelogs for LibreOffice 7.6 and Geany 2.0']
+2026-07-02 01:59:20,101 | INFO | rag_app_2026-07-02_01-57-45 | corpus_summary_retrieval_time_seconds=0.0351
+2026-07-02 01:59:32,186 | INFO | rag_app_2026-07-02_01-57-45 | ASSISTANT: LibreOffice 7.6 was officially released on August 21, 2023, as a major version of the open-source office suite with several new features and enhancements:
+- Support for zoom gestures on touchpads in the main view.
+- New document themes and import/export functionality for ODF and OOXML documents.
+- Improved font handling, especially for right-to-left scripts, CJK, and Asian alphabets.
+- Enhancements to LibreOffice Writer, including a new Page Number Wizard and improved Paragraph Style dropdown.
+
+LibreOffice 7.6 will be supported until June 12th, 2024. For users currently on version 7.5, it is recommended to upgrade to 7.6 as soon as the next minor update (7.6.3) is released in mid-November 2023.
+
+Geany 2.0, an open-source Integrated Development Environment (IDE), was also released around this time:
+- Experimental support for Meson build system.
+- New "Change history" feature in the editor.
+- Support for AutoIt and GDScript file types.
+- Dark-themed friendly color support for compiler messages.
+- Various UI improvements such as a new tree view, improved symbol tree filtering, and more.
+
+For detailed changelogs and installation instructions, you can refer to the respective project's GitHub page.
+2026-07-02 01:59:48,120 | INFO | rag_app_2026-07-02_01-57-45 | USER: summarize all documents
+2026-07-02 01:59:48,121 | INFO | rag_app_2026-07-02_01-57-45 | route=document
+2026-07-02 01:59:49,597 | INFO | rag_app_2026-07-02_01-57-45 | fuzzy_corrected_question=summarize all documents
+2026-07-02 01:59:49,597 | INFO | rag_app_2026-07-02_01-57-45 | raw_query_variants=['summarize all documents', 'summarize LibreOffice 7.6 and Geany 2.0 updates']
+2026-07-02 01:59:49,597 | INFO | rag_app_2026-07-02_01-57-45 | filtered_query_variants=['summarize LibreOffice 7.6 and Geany 2.0 updates']
+2026-07-02 01:59:49,612 | INFO | rag_app_2026-07-02_01-57-45 | multi_query_retrieval_time_seconds=0.0149
+2026-07-02 01:59:49,612 | INFO | rag_app_2026-07-02_01-57-45 | normalized_question=summarize LibreOffice 7.6 and Geany 2.0 updates
+2026-07-02 01:59:54,362 | INFO | rag_app_2026-07-02_01-57-45 | relevance=True
+2026-07-02 02:00:08,008 | INFO | rag_app_2026-07-02_01-57-45 | retrieved_sources=[{'filename': '2023_10_19T170854-Geany_20_Open_Source_IDE_Released_with_UI_Improvements_Initial_Meson_Support.pdf', 'chunk_index': 4, 'source': 'data\\2023_10_19T170854-Geany_20_Open_Source_IDE_Released_with_UI_Improvements_Initial_Meson_Support.pdf'}, {'filename': '2023_11_02T192331-LibreOffice_758_Is_Here_as_the_Last_Update_in_the_Series_Upgrade_to_LibreOffice_76_Now.pdf', 'chunk_index': 2, 'source': 'data\\2023_11_02T192331-LibreOffice_758_Is_Here_as_the_Last_Update_in_the_Series_Upgrade_to_LibreOffice_76_Now.pdf'}, {'chunk_index': 1, 'source': 'data\\2023_08_21T100042-LibreOffice_76_Open_Source_Office_Suite_Officially_Released_This_Is_Whats_New.pdf', 'filename': '2023_08_21T100042-LibreOffice_76_Open_Source_Office_Suite_Officially_Released_This_Is_Whats_New.pdf'}, {'filename': '2023_11_02T192331-LibreOffice_758_Is_Here_as_the_Last_Update_in_the_Series_Upgrade_to_LibreOffice_76_Now.pdf', 'source': 'data\\2023_11_02T192331-LibreOffice_758_Is_Here_as_the_Last_Update_in_the_Series_Upgrade_to_LibreOffice_76_Now.pdf', 'chunk_index': 1}]
+2026-07-02 02:00:08,008 | INFO | rag_app_2026-07-02_01-57-45 | ASSISTANT: Sure, here's a summary of the updates for LibreOffice 7.6 and Geany 2.0:
+
+**LibreOffice 7.6:**
+- Introduced support for zoom gestures on touchpads.
+- Added features like a new Page Number Wizard in Writer, improved paragraph style handling, and enhanced dictionary items of Hunspell and custom dictionaries.
+- Improved font handling, especially for right-to-left scripts, CJK, and Asian alphabets.
+- Enhanced Calc with pivot table layouts, autofilter support, and various other improvements.
+
+**Geany 2.0:**
+- Includes experimental Meson build system support.
+- Features improved UI elements such as a new tree view by default and enhanced symbol filtering.
+- Enhancements in filetype support for programming languages like PHP, Nim, Kotlin, Python, and markdown.
+- Supports dark-themed friendly colors for compiler messages.
+
+LibreOffice 7.6 is supported until June 12th, 2024, and Geany 2.0 was released around the same time to provide these updates and improvements. [Source 1: data\2023_08_21T100042-LibreOffice_76_Open_Source_Office_Suite_Officially_Released_This_Is_Whats_New.pdf, Source 3: data\2023_10_19T170854-Geany_20_Open_Source_IDE_Released_with_UI_Improvements_Initial_Meson_Support.pdf]
+2026-07-02 02:00:42,765 | INFO | rag_app_2026-07-02_01-57-45 | USER: what events are in the documents from 2023
+2026-07-02 02:00:42,766 | INFO | rag_app_2026-07-02_01-57-45 | route=document
+2026-07-02 02:00:44,410 | INFO | rag_app_2026-07-02_01-57-45 | fuzzy_corrected_question=whats events are in the documents from 2023
+2026-07-02 02:00:44,410 | INFO | rag_app_2026-07-02_01-57-45 | raw_query_variants=['what events are in the documents from 2023', 'events covered in the 2023 documents', 'whats events are in the documents from 2023']
+2026-07-02 02:00:44,410 | INFO | rag_app_2026-07-02_01-57-45 | filtered_query_variants=['whats events are in the documents from 2023', 'what events are in the documents from 2023']
+2026-07-02 02:00:44,436 | INFO | rag_app_2026-07-02_01-57-45 | multi_query_retrieval_time_seconds=0.0256
+2026-07-02 02:00:44,436 | INFO | rag_app_2026-07-02_01-57-45 | normalized_question=whats events are in the documents from 2023
+2026-07-02 02:00:48,027 | INFO | rag_app_2026-07-02_01-57-45 | relevance=False
+2026-07-02 02:00:48,027 | INFO | rag_app_2026-07-02_01-57-45 | ASSISTANT: I could not find that in the provided documents.
+2026-07-02 02:04:06,325 | INFO | rag_app_2026-07-02_01-57-45 | USER: exit
+2026-07-02 02:04:06,325 | INFO | rag_app_2026-07-02_01-57-45 | route=control
+2026-07-02 02:04:06,326 | INFO | rag_app_2026-07-02_01-57-45 | ASSISTANT: Goodbye.
+2026-07-02 02:04:06,327 | INFO | rag_app_2026-07-02_01-57-45 | application_exit=true

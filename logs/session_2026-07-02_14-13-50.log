@@ -1,0 +1,16 @@
+2026-07-02 14:13:50,059 | INFO | rag_app_2026-07-02_14-13-50 | session_log_file=logs\session_2026-07-02_14-13-50.log
+2026-07-02 14:13:50,059 | INFO | rag_app_2026-07-02_14-13-50 | application_start=true
+2026-07-02 14:13:58,368 | INFO | rag_app_2026-07-02_14-13-50 | USER: what happen in 2023
+2026-07-02 14:13:58,370 | INFO | rag_app_2026-07-02_14-13-50 | route=document
+2026-07-02 14:14:04,927 | INFO | rag_app_2026-07-02_14-13-50 | fuzzy_corrected_question=events in documents from t120236
+2026-07-02 14:14:04,927 | INFO | rag_app_2026-07-02_14-13-50 | raw_query_variants=['events in documents from t120236', 'what happened in 2023', 'events in 2023']
+2026-07-02 14:14:04,931 | INFO | rag_app_2026-07-02_14-13-50 | filtered_query_variants=['what happened in 2023', 'events in 2023']
+2026-07-02 14:14:05,034 | INFO | rag_app_2026-07-02_14-13-50 | multi_query_retrieval_time_seconds=0.1028
+2026-07-02 14:14:05,034 | INFO | rag_app_2026-07-02_14-13-50 | normalized_question=what happened in 2023
+2026-07-02 14:14:08,763 | INFO | rag_app_2026-07-02_14-13-50 | relevance=True
+2026-07-02 14:14:12,266 | INFO | rag_app_2026-07-02_14-13-50 | retrieved_sources=[{'filename': '2023_10_02T075900-9to5Linux_Weekly_Roundup_October_1st_2023.pdf', 'chunk_index': 3, 'source': 'data\\2023_10_02T075900-9to5Linux_Weekly_Roundup_October_1st_2023.pdf'}, {'filename': '2023_08_23T221148-Kali_Linux_20233_Released_with_9_New_Tools_for_Ethical_Hacking_Linux_Kernel_63.pdf', 'chunk_index': 0, 'source': 'data\\2023_08_23T221148-Kali_Linux_20233_Released_with_9_New_Tools_for_Ethical_Hacking_Linux_Kernel_63.pdf'}, {'filename': '2023_09_25T024112-9to5Linux_Weekly_Roundup_September_24th_2023.pdf', 'source': 'data\\2023_09_25T024112-9to5Linux_Weekly_Roundup_September_24th_2023.pdf', 'chunk_index': 0}, {'chunk_index': 4, 'source': 'data\\2023_07_11T202150-Linux_Kernel_63_Reaches_End_of_Life_Users_Urged_to_Upgrade_to_Linux_64.pdf', 'filename': '2023_07_11T202150-Linux_Kernel_63_Reaches_End_of_Life_Users_Urged_to_Upgrade_to_Linux_64.pdf'}, {'chunk_index': 3, 'filename': '2023_10_09T103945-9to5Linux_Weekly_Roundup_October_8th_2023.pdf', 'source': 'data\\2023_10_09T103945-9to5Linux_Weekly_Roundup_October_8th_2023.pdf'}, {'source': 'data\\2023_07_09T211322-Linus_Torvalds_Announces_First_Linux_Kernel_65_Release_Candidate.pdf', 'filename': '2023_07_09T211322-Linus_Torvalds_Announces_First_Linux_Kernel_65_Release_Candidate.pdf', 'chunk_index': 5}, {'chunk_index': 1, 'source': 'data\\2023_08_28T065006-9to5Linux_Weekly_Roundup_August_27th_2023.pdf', 'filename': '2023_08_28T065006-9to5Linux_Weekly_Roundup_August_27th_2023.pdf'}]
+2026-07-02 14:14:12,267 | INFO | rag_app_2026-07-02_14-13-50 | ASSISTANT: In 2023, Kali Linux 2023.3 was released in August with updates to its kernel version from 6.1 LTS to 6.3, which had reached end of life by early July 2023. [Source 2]
+2026-07-02 14:15:23,663 | INFO | rag_app_2026-07-02_14-13-50 | USER: exit
+2026-07-02 14:15:23,664 | INFO | rag_app_2026-07-02_14-13-50 | route=control
+2026-07-02 14:15:23,665 | INFO | rag_app_2026-07-02_14-13-50 | ASSISTANT: Goodbye.
+2026-07-02 14:15:23,665 | INFO | rag_app_2026-07-02_14-13-50 | application_exit=true

@@ -1,0 +1,17 @@
+2026-07-02 13:02:39,817 | INFO | rag_app_2026-07-02_13-02-39 | session_log_file=logs\session_2026-07-02_13-02-39.log
+2026-07-02 13:02:39,817 | INFO | rag_app_2026-07-02_13-02-39 | application_start=true
+2026-07-02 13:02:54,619 | INFO | rag_app_2026-07-02_13-02-39 | USER: what happed in 2023
+2026-07-02 13:02:54,620 | INFO | rag_app_2026-07-02_13-02-39 | route=document
+2026-07-02 13:03:06,926 | INFO | rag_app_2026-07-02_13-02-39 | fuzzy_corrected_question=events in documents from t120236
+2026-07-02 13:03:06,926 | INFO | rag_app_2026-07-02_13-02-39 | raw_query_variants=['events in documents from t120236', 'what happened in 2023', 'events in 2023', 'what happed in 2023']
+2026-07-02 13:03:06,926 | INFO | rag_app_2026-07-02_13-02-39 | filtered_query_variants=['events in documents from t120236']
+2026-07-02 13:03:07,050 | INFO | rag_app_2026-07-02_13-02-39 | multi_query_retrieval_time_seconds=0.1229
+2026-07-02 13:03:07,050 | INFO | rag_app_2026-07-02_13-02-39 | normalized_question=events in documents from t120236
+2026-07-02 13:03:08,013 | INFO | rag_app_2026-07-02_13-02-39 | relevance=False
+2026-07-02 13:03:08,014 | INFO | rag_app_2026-07-02_13-02-39 | low_confidence_relevance=true
+2026-07-02 13:03:09,344 | INFO | rag_app_2026-07-02_13-02-39 | retrieved_sources=[{'filename': '2023_10_12T121202-KDE_Gear_23082_Released_with_More_Fixes_for_Your_Favorite_KDE_Apps.pdf', 'source': 'data\\2023_10_12T121202-KDE_Gear_23082_Released_with_More_Fixes_for_Your_Favorite_KDE_Apps.pdf', 'chunk_index': 3}, {'filename': '2023_08_24T150040-KDE_Gear_2308_Released_with_Lots_of_Goodies_for_Your_Favorite_KDE_Apps.pdf', 'source': 'data\\2023_08_24T150040-KDE_Gear_2308_Released_with_Lots_of_Goodies_for_Your_Favorite_KDE_Apps.pdf', 'chunk_index': 2}]
+2026-07-02 13:03:09,346 | INFO | rag_app_2026-07-02_13-02-39 | ASSISTANT: I could not find that in the provided documents.
+2026-07-02 13:10:31,969 | INFO | rag_app_2026-07-02_13-02-39 | USER: exit
+2026-07-02 13:10:31,970 | INFO | rag_app_2026-07-02_13-02-39 | route=control
+2026-07-02 13:10:31,971 | INFO | rag_app_2026-07-02_13-02-39 | ASSISTANT: Goodbye.
+2026-07-02 13:10:31,971 | INFO | rag_app_2026-07-02_13-02-39 | application_exit=true

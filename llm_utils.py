@@ -2,10 +2,21 @@ from langchain_ollama import OllamaLLM
 
 from config import OLLAMA_MODEL
 
+import re
 
 def get_llm():
     return OllamaLLM(model=OLLAMA_MODEL)
 
+def is_valid_query(q: str) -> bool:
+
+    if re.search(r"[a-zA-Z]+\d{3,}", q):
+        return False
+
+    if re.search(r"\b[a-zA-Z0-9]{8,}\b", q):
+        if not re.search(r"[a-zA-Z]{4,}", q):
+            return False
+
+    return True
 
 def generate_query_variants(
     llm,
@@ -41,22 +52,7 @@ Rules:
 - Do not explain anything.
 - Output only the final queries, one per line.
 - If only 1 or 2 queries are useful, output only those.
-
-Examples:
-User question: What year?
-Chat history implies Linux Mint release.
-Good output:
-What year was the Linux Mint release?
-
-User question: When is Arx Linux available for download?
-Good output:
-When is Arx Linux available for download?
-When is Arch Linux available for download?
-
-User question: summarize it
-Chat history implies the second document.
-Good output:
-Summarize the second document.
+- NEVER modify numbers (e.g. years must stay exactly the same)
 
 Chat history:
 {history_text}
@@ -75,19 +71,37 @@ Search queries:
     cleaned = []
     for line in raw_lines:
         normalized = line.lstrip("-•*0123456789. ").strip()
-        if normalized and normalized not in cleaned:
+
+        if not normalized:
+            continue
+
+        if not is_valid_query(normalized):
+            continue
+
+        if normalized not in cleaned:
             cleaned.append(normalized)
 
-    if fuzzy_corrected_question and fuzzy_corrected_question not in cleaned:
-        cleaned.append(fuzzy_corrected_question)
+    # Always include corrected version FIRST
+    if fuzzy_corrected_question:
+        if fuzzy_corrected_question in cleaned:
+            cleaned.remove(fuzzy_corrected_question)
+        cleaned.insert(0, fuzzy_corrected_question)
 
-    if question not in cleaned:
-        cleaned.insert(0, question)
+    # Always include original LAST
+    if question in cleaned:
+        cleaned.remove(question)
+    cleaned.append(question)
 
+    # Deduplicate while preserving order
     unique = []
     for q in cleaned:
         if q and q not in unique:
             unique.append(q)
+
+    # Final safety fallback
+    if not unique:
+        if fuzzy_corrected_question: return [fuzzy_corrected_question]
+        return [question]
 
     return unique[:3]
 
@@ -102,8 +116,14 @@ user's intended question.
 
 Important guidance:
 - The context may contain both relevant and irrelevant retrieved chunks.
-- Answer YES if at least one part of the context provides enough evidence to
-  answer the intended question.
+Answer YES if the context contains ANY information that could help answer
+the question, even partially.
+
+Be permissive:
+- If the context includes related events, releases, summaries, or relevant topics,
+  answer YES.
+- Do NOT require a complete or perfect answer.
+- Only answer NO if the context is completely unrelated.
 - Treat obvious minor typos or spelling mistakes in the question as acceptable
   if the intended meaning is clear.
 - Answer NO only if the context does not provide enough evidence at all.
@@ -175,6 +195,50 @@ Document content:
 {context}
 
 Summary:
+""".strip()
+
+    answer = llm.invoke(prompt)
+    return (answer or "").strip()
+
+
+def summarize_corpus_context(llm, question: str, context: str) -> str:
+    prompt = f"""
+You are extracting events from document snippets.
+
+Task:
+Extract ALL meaningful events mentioned in the context.
+
+Definition of "event":
+- software release
+- major update
+- announcement
+- notable change
+
+STRICT RULES:
+- Extract AT LEAST 5 events if available
+- Each bullet point MUST represent a DIFFERENT event
+- Do NOT merge multiple events into one
+- Do NOT summarize broadly
+- Do NOT write paragraphs
+- ONLY output bullet points
+
+Coverage requirement:
+- The context contains multiple sources labeled [Source X]
+- You MUST extract events from MULTIPLE different sources
+- Do NOT focus on a single source
+
+Formatting:
+- Bullet list ONLY
+- One event per bullet
+- Cite sources like (Source 1)
+
+If nothing meaningful is found, output exactly:
+I could not find that in the provided documents.
+
+Context:
+{context}
+
+Events:
 """.strip()
 
     answer = llm.invoke(prompt)

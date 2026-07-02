@@ -11,6 +11,7 @@ from logger import get_logger
 from memory import SessionMemory
 from retrieval import (
     get_collection,
+    handle_corpus_summary_question,
     handle_document_question,
     handle_file_summary_question,
 )
@@ -145,6 +146,36 @@ def main():
             memory.add_turn(question, answer)
             continue
 
+        if route == "corpus_summary":
+            result = handle_corpus_summary_question(
+                llm=llm,
+                memory=memory,
+                collection=collection,
+                question=question,
+                logger=logger,
+                metadata=metadata,
+            )
+
+            answer = result["answer"]
+
+            if SHOW_QUERY_VARIANTS:
+                print("\nQuery variants used:")
+                for i, query in enumerate(result["query_variants"], start=1):
+                    print(f"{i}. {query}")
+
+            print("\nAssistant:")
+            print(answer)
+
+            logger.info("ASSISTANT: %s", answer)
+
+            if SHOW_RETRIEVED_SOURCES:
+                print("\nRetrieved sources:")
+                for i, meta in enumerate(result["results"]["metadatas"][0], start=1):
+                    print(f"{i}. {meta}")
+
+            memory.add_turn(question, answer)
+            continue
+        
         if route == "file_lookup":
             position = extract_file_position(question)
 

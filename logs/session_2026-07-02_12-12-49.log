@@ -1,0 +1,16 @@
+2026-07-02 12:12:49,643 | INFO | rag_app_2026-07-02_12-12-49 | session_log_file=logs\session_2026-07-02_12-12-49.log
+2026-07-02 12:12:49,643 | INFO | rag_app_2026-07-02_12-12-49 | application_start=true
+2026-07-02 12:13:20,513 | INFO | rag_app_2026-07-02_12-12-49 | USER: what happened in 2023
+2026-07-02 12:13:20,514 | INFO | rag_app_2026-07-02_12-12-49 | route=corpus_summary
+2026-07-02 12:13:37,314 | INFO | rag_app_2026-07-02_12-12-49 | corpus_summary_raw_query_variants=['what happened in 2023', 'events in 2023', 'events mentioned in the documents whats happened in 2023']
+2026-07-02 12:13:37,314 | INFO | rag_app_2026-07-02_12-12-49 | corpus_summary_filtered_query_variants=['events mentioned in the documents whats happened in 2023', 'what happened in 2023', 'events in 2023']
+2026-07-02 12:13:37,621 | INFO | rag_app_2026-07-02_12-12-49 | corpus_summary_retrieval_time_seconds=0.3071
+2026-07-02 12:13:42,481 | INFO | rag_app_2026-07-02_12-12-49 | ASSISTANT: - Kali Linux 2023.3 released with new tools and kernel update [Source 5]
+- Ubuntu 23.10 announced for next release [Source 3]
+- GNOME 44.3 announced for upcoming release [Source 4]
+
+These events are derived from the provided document snippets, focusing on software releases and announcements related to Linux distributions and their components.
+2026-07-02 12:39:42,016 | INFO | rag_app_2026-07-02_12-12-49 | USER: exit
+2026-07-02 12:39:42,016 | INFO | rag_app_2026-07-02_12-12-49 | route=control
+2026-07-02 12:39:42,018 | INFO | rag_app_2026-07-02_12-12-49 | ASSISTANT: Goodbye.
+2026-07-02 12:39:42,018 | INFO | rag_app_2026-07-02_12-12-49 | application_exit=true

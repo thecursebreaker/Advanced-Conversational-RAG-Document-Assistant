@@ -1,6 +1,6 @@
 import re
 from difflib import get_close_matches
-
+from llm_utils import is_valid_query
 from config import (
     MAX_TYPO_CORRECTIONS_PER_QUERY,
     TYPO_MIN_WORD_LENGTH,
@@ -232,13 +232,22 @@ def score_query_variant(query: str, metadata: dict) -> int:
 def filter_query_variants(queries: list[str], metadata: dict) -> list[str]:
     unique = []
     for q in queries:
-        if q and q not in unique:
+        if not q:
+            continue
+
+        if not is_valid_query(q):
+            continue
+
+        if q not in unique:
             unique.append(q)
+
+    if not unique:
+        return []
 
     scored = [(q, score_query_variant(q, metadata)) for q in unique]
     scored.sort(key=lambda item: item[1], reverse=True)
 
-    best_score = scored[0][1] if scored else 0
+    best_score = scored[0][1]
 
     filtered = []
     for q, score in scored:

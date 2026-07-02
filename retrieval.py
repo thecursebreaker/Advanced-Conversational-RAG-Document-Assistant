@@ -6,6 +6,7 @@ from chromadb.utils import embedding_functions
 from config import (
     CHROMA_DIR,
     COLLECTION_NAME,
+    CORPUS_SUMMARY_K,
     EMBEDDING_MODEL,
     MAX_HISTORY_TURNS,
     MULTI_QUERY_FINAL_K,
@@ -16,12 +17,24 @@ from llm_utils import (
     answer_from_context,
     generate_query_variants,
     judge_relevance,
+    summarize_corpus_context,
     summarize_document_context,
 )
 from tools import filter_query_variants, fuzzy_correct_query
 
 
 REFUSAL_TEXT = "I could not find that in the provided documents."
+
+def rewrite_broad_query(question: str) -> str:
+    q = question.lower()
+
+    if "what happened" in q or "events" in q:
+        return "events mentioned in the documents " + question
+
+    if "2023" in q:
+        return "events in documents from 2023"
+
+    return question
 
 
 def get_collection():
@@ -63,7 +76,7 @@ def retrieve_single_query(collection, query: str, k: int):
     return results, elapsed
 
 
-def merge_multi_query_results(results_list, final_k: int):
+def merge_multi_query_results(results_list, final_k: int, mode: str):
     merged_docs = []
     merged_metas = []
     seen = set()
@@ -73,10 +86,13 @@ def merge_multi_query_results(results_list, final_k: int):
         metas = result.get("metadatas", [[]])[0]
 
         for doc, meta in zip(docs, metas):
-            key = (
-                meta.get("source", ""),
-                meta.get("chunk_index", ""),
-            )
+            if mode == "document":
+                key = meta.get("source", "")
+            else:  # corpus_summary
+                key = (
+                    meta.get("source", ""),
+                    meta.get("chunk_index", ""),
+                )
             if key in seen:
                 continue
 
@@ -96,7 +112,7 @@ def merge_multi_query_results(results_list, final_k: int):
     }
 
 
-def retrieve_multi_query(collection, queries: list[str]):
+def retrieve_multi_query(collection, queries: list[str], final_k: int, mode: str = "document"):
     all_results = []
     total_time = 0.0
 
@@ -113,7 +129,8 @@ def retrieve_multi_query(collection, queries: list[str]):
 
     merged = merge_multi_query_results(
         results_list=all_results,
-        final_k=MULTI_QUERY_FINAL_K,
+        final_k=final_k,
+        mode=mode,
     )
 
     return merged, total_time
@@ -146,8 +163,10 @@ def handle_document_question(
 ):
     history_text = memory.format_recent_history(MAX_HISTORY_TURNS)
 
+    rewritten = rewrite_broad_query(question)
+
     fuzzy_corrected_question = fuzzy_correct_query(
-        question=question,
+        question=rewritten,
         metadata=metadata,
     )
 
@@ -157,12 +176,17 @@ def handle_document_question(
         question=question,
         fuzzy_corrected_question=fuzzy_corrected_question,
     )
+    
+    if fuzzy_corrected_question:
+        if fuzzy_corrected_question in raw_query_variants:
+            raw_query_variants.remove(fuzzy_corrected_question)
+        raw_query_variants.insert(0, fuzzy_corrected_question)
 
     query_variants = filter_query_variants(
         queries=raw_query_variants,
         metadata=metadata,
     )
-
+    
     logger.info("fuzzy_corrected_question=%s", fuzzy_corrected_question)
     logger.info("raw_query_variants=%s", raw_query_variants)
     logger.info("filtered_query_variants=%s", query_variants)
@@ -170,6 +194,8 @@ def handle_document_question(
     results, retrieval_time = retrieve_multi_query(
         collection=collection,
         queries=query_variants,
+        final_k=MULTI_QUERY_FINAL_K,
+        mode="document",
     )
 
     logger.info("multi_query_retrieval_time_seconds=%.4f", retrieval_time)
@@ -199,12 +225,7 @@ def handle_document_question(
     logger.info("relevance=%s", relevant)
 
     if not relevant:
-        return {
-            "answer": REFUSAL_TEXT,
-            "query_variants": query_variants,
-            "results": results,
-            "relevant": False,
-        }
+        logger.info("low_confidence_relevance=true")
 
     answer = answer_from_context(
         llm=llm,
@@ -223,6 +244,91 @@ def handle_document_question(
         "query_variants": query_variants,
         "results": results,
         "relevant": True,
+    }
+
+
+def handle_corpus_summary_question(
+    llm,
+    memory,
+    collection,
+    question: str,
+    logger,
+    metadata: dict,
+):
+    history_text = memory.format_recent_history(MAX_HISTORY_TURNS)
+
+    rewritten = rewrite_broad_query(question)
+
+    fuzzy_corrected_question = fuzzy_correct_query(
+        question=rewritten,
+        metadata=metadata,
+    )
+
+    raw_query_variants = generate_query_variants(
+        llm=llm,
+        history_text=history_text,
+        question=question,
+        fuzzy_corrected_question=fuzzy_corrected_question,
+    )
+
+    query_variants = filter_query_variants(
+        queries=raw_query_variants,
+        metadata=metadata,
+    )
+    
+    m = re.search(r"(20\d{2})", question)
+    year = m.group(1) if m else None
+
+    if year:
+        query_variants.append(f"linux software releases {year}")
+        query_variants.append(f"linux updates and announcements {year}")
+    else:
+        query_variants.append("linux software releases")
+        query_variants.append("linux updates and announcements")
+
+    logger.info("corpus_summary_raw_query_variants=%s", raw_query_variants)
+    logger.info("corpus_summary_filtered_query_variants=%s", query_variants)
+
+    results, retrieval_time = retrieve_multi_query(
+        collection=collection,
+        queries=query_variants,
+        final_k=CORPUS_SUMMARY_K + 8,
+        mode="corpus",
+    )
+
+    logger.info("corpus_summary_retrieval_time_seconds=%.4f", retrieval_time)
+
+    docs = results.get("documents", [[]])[0]
+    if not docs:
+        return {
+            "answer": REFUSAL_TEXT,
+            "query_variants": query_variants,
+            "results": results,
+        }
+
+    context = build_context(results)
+    answer = summarize_corpus_context(
+        llm=llm,
+        question=question,
+        context=context,
+    )
+    
+    if not answer.strip() or REFUSAL_TEXT in answer:
+        logger.info("fallback_to_looser_summary=true")
+
+        answer = summarize_corpus_context(
+            llm=llm,
+            question=question + " list all events",
+            context=context,
+        )
+
+    if REFUSAL_TEXT.lower() in answer.lower():
+        answer = REFUSAL_TEXT
+
+    return {
+        "answer": answer,
+        "query_variants": query_variants,
+        "results": results,
     }
 
 
@@ -250,3 +356,4 @@ def handle_file_summary_question(llm, filename: str, collection, logger):
         "answer": answer,
         "results": results,
     }
+    

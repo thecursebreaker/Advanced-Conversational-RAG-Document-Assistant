@@ -1,9 +1,11 @@
 import re
-
+from tools import fuzzy_correct_query
 
 def classify_route(question: str) -> str:
     q = question.lower().strip()
-
+    
+    normalized_q = fuzzy_correct_query(question, {"files": []}).lower().strip()
+    
     if q in {"exit", "quit", "reset", "help"}:
         return "control"
 
@@ -18,9 +20,19 @@ def classify_route(question: str) -> str:
     }
     if q in chat_patterns:
         return "chat"
-
-    if re.search(r"\b(first|second|third|\d+(?:st|nd|rd|th)?)\s+document\b", q):
+    
+    if re.search(r"\b(first|second|third|\d+(?:st|nd|rd|th)?)\s+document\b", normalized_q):
         return "file_lookup"
+
+    if re.search(r"\b(what happened|events)\b", normalized_q):
+        return "corpus_summary"
+
+    if re.search(r"\b(summarize|summarise).*(documents|files|corpus)\b", normalized_q):
+        return "corpus_summary"
+
+    if re.search(r"\bwhat (topics|events).*(documents|files)\b", normalized_q):
+        return "corpus_summary"
+    
 
     if "what files" in q or "which files" in q or "what documents" in q:
         return "meta"
@@ -34,7 +46,7 @@ def classify_route(question: str) -> str:
         "what do you know",
         "database",
     ]
-    if any(keyword in q for keyword in meta_keywords):
+    if any(keyword in normalized_q for keyword in meta_keywords):
         return "meta"
 
     memory_patterns = [
@@ -47,13 +59,13 @@ def classify_route(question: str) -> str:
         r"questions ago",
         r"recent questions",
     ]
-    if any(re.search(pattern, q) for pattern in memory_patterns):
+    if any(re.search(pattern, normalized_q) for pattern in memory_patterns):
         return "memory"
 
     math_like = [
         r"^\d+\s*[\+\-\*/]\s*\d+\s*=?$",
     ]
-    if any(re.match(pattern, q) for pattern in math_like):
+    if any(re.match(pattern, normalized_q) for pattern in math_like):
         return "general"
 
     general_keywords = [
@@ -62,7 +74,7 @@ def classify_route(question: str) -> str:
         "what does being gay mean",
         "define morality",
     ]
-    if any(keyword in q for keyword in general_keywords):
+    if any(keyword in normalized_q for keyword in general_keywords):
         return "general"
 
     return "document"

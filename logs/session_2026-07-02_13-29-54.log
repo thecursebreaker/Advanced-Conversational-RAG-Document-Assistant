@@ -1,0 +1,30 @@
+2026-07-02 13:29:54,168 | INFO | rag_app_2026-07-02_13-29-54 | session_log_file=logs\session_2026-07-02_13-29-54.log
+2026-07-02 13:29:54,169 | INFO | rag_app_2026-07-02_13-29-54 | application_start=true
+2026-07-02 13:30:02,040 | INFO | rag_app_2026-07-02_13-29-54 | USER: what happened in 2023
+2026-07-02 13:30:02,041 | INFO | rag_app_2026-07-02_13-29-54 | route=corpus_summary
+2026-07-02 13:30:13,594 | INFO | rag_app_2026-07-02_13-29-54 | corpus_summary_raw_query_variants=['events mentioned in the documents whats appcenter in t120236', 'events mentioned in 2023', 'what happened in 2023']
+2026-07-02 13:30:13,598 | INFO | rag_app_2026-07-02_13-29-54 | corpus_summary_filtered_query_variants=['events mentioned in 2023', 'what happened in 2023']
+2026-07-02 13:30:13,763 | INFO | rag_app_2026-07-02_13-29-54 | corpus_summary_retrieval_time_seconds=0.1647
+2026-07-02 13:30:15,980 | INFO | rag_app_2026-07-02_13-29-54 | fallback_to_looser_summary=true
+2026-07-02 13:30:20,956 | INFO | rag_app_2026-07-02_13-29-54 | ASSISTANT: The document summarizes several editions of the 9to5Linux Weekly Roundup, covering news from July to October 2023. These roundups highlight important developments in the Linux world, including newly released distributions and software updates such as Ubuntu 23.10 and Kali Linux 2023.3, which introduced significant tools for ethical hacking and updated kernel versions. The documents also emphasize community support through donations and sponsorships that keep the website operational.
+2026-07-02 13:30:40,791 | INFO | rag_app_2026-07-02_13-29-54 | USER: what happed in 2023
+2026-07-02 13:30:40,792 | INFO | rag_app_2026-07-02_13-29-54 | route=document
+2026-07-02 13:30:41,937 | INFO | rag_app_2026-07-02_13-29-54 | fuzzy_corrected_question=events in documents from t120236
+2026-07-02 13:30:41,937 | INFO | rag_app_2026-07-02_13-29-54 | raw_query_variants=['events in documents from t120236', 'what happened in 2023', 'events in 2023']
+2026-07-02 13:30:41,937 | INFO | rag_app_2026-07-02_13-29-54 | filtered_query_variants=['what happened in 2023', 'events in 2023']
+2026-07-02 13:30:41,960 | INFO | rag_app_2026-07-02_13-29-54 | multi_query_retrieval_time_seconds=0.0236
+2026-07-02 13:30:41,960 | INFO | rag_app_2026-07-02_13-29-54 | normalized_question=what happened in 2023
+2026-07-02 13:30:42,926 | INFO | rag_app_2026-07-02_13-29-54 | relevance=False
+2026-07-02 13:30:42,927 | INFO | rag_app_2026-07-02_13-29-54 | low_confidence_relevance=true
+2026-07-02 13:30:47,868 | INFO | rag_app_2026-07-02_13-29-54 | retrieved_sources=[{'chunk_index': 3, 'filename': '2023_10_02T075900-9to5Linux_Weekly_Roundup_October_1st_2023.pdf', 'source': 'data\\2023_10_02T075900-9to5Linux_Weekly_Roundup_October_1st_2023.pdf'}, {'filename': '2023_08_23T221148-Kali_Linux_20233_Released_with_9_New_Tools_for_Ethical_Hacking_Linux_Kernel_63.pdf', 'chunk_index': 0, 'source': 'data\\2023_08_23T221148-Kali_Linux_20233_Released_with_9_New_Tools_for_Ethical_Hacking_Linux_Kernel_63.pdf'}, {'source': 'data\\2023_09_25T024112-9to5Linux_Weekly_Roundup_September_24th_2023.pdf', 'filename': '2023_09_25T024112-9to5Linux_Weekly_Roundup_September_24th_2023.pdf', 'chunk_index': 0}, {'source': 'data\\2023_10_09T103945-9to5Linux_Weekly_Roundup_October_8th_2023.pdf', 'filename': '2023_10_09T103945-9to5Linux_Weekly_Roundup_October_8th_2023.pdf', 'chunk_index': 3}]
+2026-07-02 13:30:47,869 | INFO | rag_app_2026-07-02_13-29-54 | ASSISTANT: In 2023, several notable events occurred:
+
+1. Kali Linux 2023.3 was released with updates to the Linux kernel, new tools for ethical hacking, and improvements to existing features.
+2. New versions of software distributions such as Ubuntu 23.10 and KDE Gear 23.08.2 were released.
+3. The website 9to5Linux published weekly roundups covering important developments in the Linux world.
+
+[Source 1] [Source 4]
+2026-07-02 13:46:34,184 | INFO | rag_app_2026-07-02_13-29-54 | USER: exit
+2026-07-02 13:46:34,185 | INFO | rag_app_2026-07-02_13-29-54 | route=control
+2026-07-02 13:46:34,186 | INFO | rag_app_2026-07-02_13-29-54 | ASSISTANT: Goodbye.
+2026-07-02 13:46:34,186 | INFO | rag_app_2026-07-02_13-29-54 | application_exit=true
