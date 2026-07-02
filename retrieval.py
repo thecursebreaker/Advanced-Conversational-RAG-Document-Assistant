@@ -1,5 +1,5 @@
 import time
-
+from llm_utils import semantic_correct_query  
 import chromadb
 from chromadb.utils import embedding_functions
 
@@ -162,11 +162,15 @@ def handle_document_question(
     metadata: dict,
 ):
     history_text = memory.format_recent_history(MAX_HISTORY_TURNS)
-
-    rewritten = rewrite_broad_query(question)
-
+    if logger is None:
+        class DummyLogger:
+            def info(self, *args, **kwargs): pass
+            def error(self, *args, **kwargs): pass
+        logger = DummyLogger()
+    rewritten = rewrite_broad_query(question)       
+    semantic_corrected = semantic_correct_query(rewritten)
     fuzzy_corrected_question = fuzzy_correct_query(
-        question=rewritten,
+        question=semantic_corrected,
         metadata=metadata,
     )
 
@@ -186,6 +190,11 @@ def handle_document_question(
         queries=raw_query_variants,
         metadata=metadata,
     )
+    q_lower = question.lower()
+
+    if "when" in q_lower and "download" in q_lower:
+        query_variants.append("release date linux iso")
+        query_variants.append("linux iso available download release")
     
     logger.info("fuzzy_corrected_question=%s", fuzzy_corrected_question)
     logger.info("raw_query_variants=%s", raw_query_variants)
@@ -212,7 +221,12 @@ def handle_document_question(
             "relevant": False,
         }
 
-    context = build_context(results)
+    top_k = 3
+    trimmed_results = {
+        "documents": [results["documents"][0][:top_k]],
+        "metadatas": [results["metadatas"][0][:top_k]],
+    }
+    context = build_context(trimmed_results)
 
     normalized_question = query_variants[0] if query_variants else question
     logger.info("normalized_question=%s", normalized_question)
@@ -233,7 +247,11 @@ def handle_document_question(
         question=normalized_question,
         context=context,
     )
-
+    if "could not find" in answer.lower() or len(answer.split()) < 5:
+        answer = summarize_document_context(
+            llm,
+            context + f"\n\nFocus on answering: {normalized_question}"
+        )
     if REFUSAL_TEXT.lower() in answer.lower():
         answer = REFUSAL_TEXT
 
@@ -259,8 +277,10 @@ def handle_corpus_summary_question(
 
     rewritten = rewrite_broad_query(question)
 
+    semantic_corrected = semantic_correct_query(rewritten)
+
     fuzzy_corrected_question = fuzzy_correct_query(
-        question=rewritten,
+        question=semantic_corrected,
         metadata=metadata,
     )
 
@@ -306,7 +326,15 @@ def handle_corpus_summary_question(
             "results": results,
         }
 
-    context = build_context(results)
+    top_k = 3
+
+    trimmed_results = {
+        "documents": [results["documents"][0][:top_k]],
+        "metadatas": [results["metadatas"][0][:top_k]],
+    }
+
+    context = build_context(trimmed_results)
+    
     answer = summarize_corpus_context(
         llm=llm,
         question=question,

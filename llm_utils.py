@@ -3,6 +3,38 @@ from langchain_ollama import OllamaLLM
 from config import OLLAMA_MODEL
 
 import re
+from sentence_transformers import SentenceTransformer, util
+import torch
+
+
+semantic_model = SentenceTransformer("all-MiniLM-L6-v2")
+
+KNOWN_TERMS = [
+    "arch linux",
+    "linux",
+    "ubuntu",
+    "kde",
+    "kali linux",
+    "kernel",
+    "release",
+    "download",
+]
+
+KNOWN_EMBEDDINGS = semantic_model.encode(KNOWN_TERMS, convert_to_tensor=True)
+
+
+def semantic_correct_query(query: str, threshold: float = 0.75) -> str:
+    query_emb = semantic_model.encode(query, convert_to_tensor=True)
+
+    similarities = util.cos_sim(query_emb, KNOWN_EMBEDDINGS)[0]
+    best_idx = torch.argmax(similarities).item()
+    best_score = similarities[best_idx].item()
+
+    if best_score > threshold:
+        return query + " " + KNOWN_TERMS[best_idx]
+
+    return query
+
 
 def get_llm():
     return OllamaLLM(model=OLLAMA_MODEL)
@@ -158,7 +190,10 @@ Answering policy:
 - Treat obvious minor typos in the user's wording as acceptable if the intended
   meaning is clear from the context.
 - Do not use outside knowledge.
-- If the answer is not supported by the context, output exactly:
+- If the answer is explicitly stated OR can be reasonably inferred from the context, answer it.
+- If a date, release, or event is mentioned, use it to answer "when" questions.
+- Only refuse if the answer is completely missing from the context.
+- If refusing, output exactly:
 I could not find that in the provided documents.
 - Do not add extra explanation after that refusal.
 - If supported, answer concisely and directly.

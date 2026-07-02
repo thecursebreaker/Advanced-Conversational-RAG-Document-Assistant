@@ -21,6 +21,15 @@ def classify_route(question: str) -> str:
     if q in chat_patterns:
         return "chat"
     
+    if re.search(r"\bhow m\w+ (documents|files)\b", normalized_q):
+        return "meta"
+    
+    if re.search(r"\b(what|which)\b.*\b(documents|files)\b", normalized_q):
+        return "meta"
+    
+    if re.search(r"\b\d+(?:st|nd|rd|th)\b", normalized_q):
+        return "file_lookup"
+    
     if re.search(r"\b(first|second|third|\d+(?:st|nd|rd|th)?)\s+document\b", normalized_q):
         return "file_lookup"
 

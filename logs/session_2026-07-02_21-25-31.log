@@ -1,0 +1,17 @@
+2026-07-02 21:25:31,148 | INFO | rag_app_2026-07-02_21-25-31 | session_log_file=logs\session_2026-07-02_21-25-31.log
+2026-07-02 21:25:31,148 | INFO | rag_app_2026-07-02_21-25-31 | application_start=true
+2026-07-02 21:25:41,236 | INFO | rag_app_2026-07-02_21-25-31 | USER: when is arx linus available for download
+2026-07-02 21:25:41,239 | INFO | rag_app_2026-07-02_21-25-31 | route=document
+2026-07-02 21:25:42,938 | INFO | rag_app_2026-07-02_21-25-31 | fuzzy_corrected_question=when is arx linus available for download
+2026-07-02 21:25:42,938 | INFO | rag_app_2026-07-02_21-25-31 | raw_query_variants=['when is arx linus available for download', 'when is arx linux available for download', 'arx linux release date', 'is there a planned release date for arx linux']
+2026-07-02 21:25:42,939 | INFO | rag_app_2026-07-02_21-25-31 | filtered_query_variants=['when is arx linux available for download', 'arx linux release date', 'is there a planned release date for arx linux', 'release date linux iso', 'linux iso available download release']
+2026-07-02 21:25:43,047 | INFO | rag_app_2026-07-02_21-25-31 | multi_query_retrieval_time_seconds=0.1076
+2026-07-02 21:25:43,047 | INFO | rag_app_2026-07-02_21-25-31 | normalized_question=when is arx linux available for download
+2026-07-02 21:25:45,206 | INFO | rag_app_2026-07-02_21-25-31 | relevance=False
+2026-07-02 21:25:45,206 | INFO | rag_app_2026-07-02_21-25-31 | low_confidence_relevance=true
+2026-07-02 21:25:46,060 | INFO | rag_app_2026-07-02_21-25-31 | retrieved_sources=[{'filename': '2023_09_25T024112-9to5Linux_Weekly_Roundup_September_24th_2023.pdf', 'source': 'data\\2023_09_25T024112-9to5Linux_Weekly_Roundup_September_24th_2023.pdf', 'chunk_index': 2}, {'chunk_index': 0, 'source': 'data\\2023_07_10T103011-9to5Linux_Weekly_Roundup_July_9th_2023.pdf', 'filename': '2023_07_10T103011-9to5Linux_Weekly_Roundup_July_9th_2023.pdf'}, {'chunk_index': 1, 'filename': '2023_10_14T082419-Arch_Linuxs_October_2023_ISO_Release_Brings_Linux_65_Installer_Improvements.pdf', 'source': 'data\\2023_10_14T082419-Arch_Linuxs_October_2023_ISO_Release_Brings_Linux_65_Installer_Improvements.pdf'}, {'source': 'data\\2023_08_28T065006-9to5Linux_Weekly_Roundup_August_27th_2023.pdf', 'chunk_index': 2, 'filename': '2023_08_28T065006-9to5Linux_Weekly_Roundup_August_27th_2023.pdf'}, {'chunk_index': 3, 'source': 'data\\2023_10_09T103945-9to5Linux_Weekly_Roundup_October_8th_2023.pdf', 'filename': '2023_10_09T103945-9to5Linux_Weekly_Roundup_October_8th_2023.pdf'}, {'source': 'data\\2023_10_23T095713-9to5Linux_Weekly_Roundup_October_22nd_2023.pdf', 'filename': '2023_10_23T095713-9to5Linux_Weekly_Roundup_October_22nd_2023.pdf', 'chunk_index': 2}]
+2026-07-02 21:25:46,061 | INFO | rag_app_2026-07-02_21-25-31 | ASSISTANT: I could not find that in the provided documents.
+2026-07-02 21:28:23,117 | INFO | rag_app_2026-07-02_21-25-31 | USER: exit
+2026-07-02 21:28:23,118 | INFO | rag_app_2026-07-02_21-25-31 | route=control
+2026-07-02 21:28:23,118 | INFO | rag_app_2026-07-02_21-25-31 | ASSISTANT: Goodbye.
+2026-07-02 21:28:23,118 | INFO | rag_app_2026-07-02_21-25-31 | application_exit=true

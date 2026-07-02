@@ -1,0 +1,19 @@
+2026-07-02 21:37:55,061 | INFO | rag_app_2026-07-02_21-37-55 | session_log_file=logs\session_2026-07-02_21-37-55.log
+2026-07-02 21:37:55,061 | INFO | rag_app_2026-07-02_21-37-55 | application_start=true
+2026-07-02 21:38:07,092 | INFO | rag_app_2026-07-02_21-37-55 | USER: when is arx linus available for download
+2026-07-02 21:38:07,094 | INFO | rag_app_2026-07-02_21-37-55 | route=document
+2026-07-02 21:38:14,403 | INFO | rag_app_2026-07-02_21-37-55 | fuzzy_corrected_question=when is arx linus available for download
+2026-07-02 21:38:14,403 | INFO | rag_app_2026-07-02_21-37-55 | raw_query_variants=['when is arx linus available for download', 'when is arx linux available for download', 'arx linux release date', 'is there a scheduled release date for arx linux']
+2026-07-02 21:38:14,407 | INFO | rag_app_2026-07-02_21-37-55 | filtered_query_variants=['when is arx linux available for download', 'arx linux release date', 'is there a scheduled release date for arx linux', 'release date linux iso', 'linux iso available download release']
+2026-07-02 21:38:14,506 | INFO | rag_app_2026-07-02_21-37-55 | multi_query_retrieval_time_seconds=0.0996
+2026-07-02 21:38:14,506 | INFO | rag_app_2026-07-02_21-37-55 | normalized_question=when is arx linux available for download
+2026-07-02 21:38:17,439 | INFO | rag_app_2026-07-02_21-37-55 | relevance=False
+2026-07-02 21:38:17,439 | INFO | rag_app_2026-07-02_21-37-55 | low_confidence_relevance=true
+2026-07-02 21:38:23,607 | INFO | rag_app_2026-07-02_21-37-55 | retrieved_sources=[{'source': 'data\\2023_09_25T024112-9to5Linux_Weekly_Roundup_September_24th_2023.pdf', 'filename': '2023_09_25T024112-9to5Linux_Weekly_Roundup_September_24th_2023.pdf', 'chunk_index': 2}, {'chunk_index': 0, 'filename': '2023_07_10T103011-9to5Linux_Weekly_Roundup_July_9th_2023.pdf', 'source': 'data\\2023_07_10T103011-9to5Linux_Weekly_Roundup_July_9th_2023.pdf'}, {'filename': '2023_10_14T082419-Arch_Linuxs_October_2023_ISO_Release_Brings_Linux_65_Installer_Improvements.pdf', 'chunk_index': 1, 'source': 'data\\2023_10_14T082419-Arch_Linuxs_October_2023_ISO_Release_Brings_Linux_65_Installer_Improvements.pdf'}, {'filename': '2023_08_28T065006-9to5Linux_Weekly_Roundup_August_27th_2023.pdf', 'chunk_index': 2, 'source': 'data\\2023_08_28T065006-9to5Linux_Weekly_Roundup_August_27th_2023.pdf'}, {'chunk_index': 3, 'filename': '2023_10_09T103945-9to5Linux_Weekly_Roundup_October_8th_2023.pdf', 'source': 'data\\2023_10_09T103945-9to5Linux_Weekly_Roundup_October_8th_2023.pdf'}, {'chunk_index': 4, 'filename': '2023_07_09T211322-Linus_Torvalds_Announces_First_Linux_Kernel_65_Release_Candidate.pdf', 'source': 'data\\2023_07_09T211322-Linus_Torvalds_Announces_First_Linux_Kernel_65_Release_Candidate.pdf'}]
+2026-07-02 21:38:23,608 | INFO | rag_app_2026-07-02_21-37-55 | ASSISTANT: The summary of the document focuses on the availability and features of Arch Linux's October 2023 ISO release:
+
+Arch Linux's October 2023 ISO release, featuring improvements in the installer and powered by Linux kernel 6.5, is now available for download from their official website. This version includes a more robust installer with new features and bug fixes, offering better hardware support out-of-the-box. The ISO comes with Linux kernel 6.5.7 and archinstall version 2.6.3.
+2026-07-02 21:38:30,790 | INFO | rag_app_2026-07-02_21-37-55 | USER: exit
+2026-07-02 21:38:30,790 | INFO | rag_app_2026-07-02_21-37-55 | route=control
+2026-07-02 21:38:30,791 | INFO | rag_app_2026-07-02_21-37-55 | ASSISTANT: Goodbye.
+2026-07-02 21:38:30,791 | INFO | rag_app_2026-07-02_21-37-55 | application_exit=true

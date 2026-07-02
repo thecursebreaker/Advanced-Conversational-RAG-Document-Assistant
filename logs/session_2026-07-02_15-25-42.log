@@ -1,0 +1,9 @@
+2026-07-02 15:25:42,225 | INFO | rag_app_2026-07-02_15-25-42 | session_log_file=logs\session_2026-07-02_15-25-42.log
+2026-07-02 15:25:42,226 | INFO | rag_app_2026-07-02_15-25-42 | application_start=true
+2026-07-02 15:25:51,025 | INFO | rag_app_2026-07-02_15-25-42 | USER: what is morality
+2026-07-02 15:25:51,026 | INFO | rag_app_2026-07-02_15-25-42 | route=general
+2026-07-02 15:25:51,027 | INFO | rag_app_2026-07-02_15-25-42 | ASSISTANT: That question is outside the scope of the indexed documents. Ask me about your files instead.
+2026-07-02 15:25:55,969 | INFO | rag_app_2026-07-02_15-25-42 | USER: exit
+2026-07-02 15:25:55,973 | INFO | rag_app_2026-07-02_15-25-42 | route=control
+2026-07-02 15:25:55,974 | INFO | rag_app_2026-07-02_15-25-42 | ASSISTANT: Goodbye.
+2026-07-02 15:25:55,974 | INFO | rag_app_2026-07-02_15-25-42 | application_exit=true
