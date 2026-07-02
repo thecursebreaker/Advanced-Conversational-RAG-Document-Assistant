@@ -35,7 +35,7 @@ Special care is taken to:
 * preserve query intent
 * allow inference from implicit evidence
 
-![App Screenshot](images/example.png)
+![App Screenshot](example.png)
 
 ## Evaluation Framework
 
